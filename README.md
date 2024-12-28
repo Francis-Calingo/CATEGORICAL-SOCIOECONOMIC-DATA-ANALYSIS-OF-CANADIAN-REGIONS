@@ -114,7 +114,10 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
    <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
     </ul>
 
-Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
+It appears that, based on the p-values and the coefficient estimates, that average income and post-secondary
+opportunities have the biggest influence on out-migration. That makes sense, since average income is tied
+to economic opportunities, and post-secondary opportunities are tied to job prospects.
+
 
 ## Predictions
 ![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
