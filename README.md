@@ -1,5 +1,140 @@
-While I have coded with R previously, this remains the R project that I am the most proud of so far. This is an R project that I did for a 4th year Applied Categorical Data Analysis course for my undergraduate studies. 
-I used various Statistics Canada databases by socioeconomic factors and census subdivisions from 2015-2019 to conclude which socioeconomic factor quantitatively had the biggest impact on a per-capita basis, and therefore warrants high priority from the federal government. Final Grade: A. 
-I am very proud of this work for multiple reasons: 1. Rather than picking one database, I decided to challenge myself and perform data extraction and data cleaning of multiple databases. 2. This allowed me to get my feet wet on starting my journey of eventually becoming a policy data scientist. 3. Extensive application of statistical concepts in real-world scenarios.
-Of course, due to many factors such as time constraints, it is not a perfect project. There are certain flaws, certain functions could have been implemented better, better data cleaning and extraction processes could have been possible, etc. However, that is data science in a nutshell. The shortcomings are just as interesting, if not more, than the successes because it allows us to implement code better, as well as perform and communicate analysis better. It can also serve as a way for other people to collaboratively communicate feedback.
-I hope that I can revisit this project and improve it significantly, as this is a topic that deeply interests me! :)
+# PROJECT OVERVIEW: Categorical Data Analysis Using R (Canadian Census Subdivisions)
+
+  <ul>
+    <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census Subdivisions (2016).</li>
+    <li>Scraped data from Statistics Canada.</li>
+    <li>Generated synthetic rental price data using a com</li>
+    <li>Performed Hyperparamter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
+  </ul>
+  
+## Code and Resources Used
+  <ul>
+    <li><b>IDEs Used:</b> RStudio</li>
+    <li><b>R Version:</b> 3.10.12</li>
+    <li><b>Libraries and Packages:</b>
+    <ul>
+      <li><b><i>sklearn Packages:</i> </b> ColumnTransformer, Pipeline, StandardScaler, OneHotEncoder, train_test_split, LinearRegression, mean_squared_error, r2_score, RandomForestRegressor, make_scorer, cross_val_score, GridSearchCV</li>
+      <li><b> <i>Other Packages:</i> </b> pandas, files (from google.colab), seaborn</li>
+    </ul>
+  </ul>
+  
+## Web Scraping
+Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+
+## Feature Engineering
+The following ChatGPT prompt was used to generate our synthetic data:
+
+<i>Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:</i>
+
+<i><b>1.	Data Columns:</b>
+<ul>
+    <li>City: Major cities like Toronto, Vancouver, Montreal, Calgary, etc.</li>
+    <li>Province: Corresponding provinces (e.g., Ontario, British Columbia).</li>
+    <li>Libraries and Packages:</li>
+    <li>Year: From 2019 to 2023.</li>
+  <li>Month: January to December.</li>
+  <li>Rental Type: Apartment, Condo, Detached House, Townhouse.</li>
+  <li>Number of Bedrooms: 1, 2, 3, 4, etc.</li>
+  <li>Number of Bathrooms: 1, 2, 3, etc.</li>
+  <li>Square Footage: Ranges for different rental types.</li>
+  <li>Furnished: Yes/No.</li>
+  <li>Pet Friendly: Yes/No.</li>
+  <li>Parking Included: Yes/No.</li>
+  <li>Distance to City Center (km): Numeric value.</li>
+  <li>Monthly Rent (Target): Dependent variable, with realistic pricing trends.</li>
+  <li>Walk Score: A score between 0 and 100 indicating walkability.</li>
+  <li>Transit Score: A score between 0 and 100 indicating access to public transit.</li>
+  <li>Age of Building: Number of years since the building was constructed.</li>
+  <li>Energy Efficiency Rating: Numeric score (e.g., 0–10).</li>
+  <li>Lease Term: Length of the lease in months (e.g., 6, 12, 24).</li>
+  <li>Noise Level: Numeric score (e.g., 1–10, with 10 being very noisy).</li>
+  <li>Nearby Schools Rating: Average rating of schools in the area (1–10).</li>
+  <li>Internet Availability: Yes/No indicating high-speed internet availability.</li>
+  <li>Crime Rate Index: A score representing the area's safety.</li>
+  <li>Annual Property Tax: Approximation based on rent and location.</li>
+  </ul>
+
+
+<b>2.	Realism:</b>
+<ul>
+<li>Average monthly rent should reflect the general cost of living in each city. For example, Vancouver and Toronto should have higher average rents compared to Edmonton or Halifax.</li>
+<li>Include a range of rental prices within cities to capture variability (e.g., downtown areas vs. suburban neighborhoods).</li>
+<li>Use realistic distributions for rental prices, square footage, and proximity to transit. For instance, apartments should generally be smaller and less expensive than single-family homes.</li>
+</ul>
+
+<b>3.	Additional Notes:</b>
+<ul>
+<li>Include 10,000 rows of data distributed proportionally across cities.</li>
+<li>Reflect seasonality and trends where applicable (e.g., higher prices in Toronto and Vancouver for smaller units due to demand).</li>
+<li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
+</ul>
+</i>
+
+
+## Data Cleaning & Exploratory Data Analysis
+  <ul>
+    <li>Target Variable=MonthlyRent</li>
+    <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
+    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.</li>
+  </ul>
+  
+![image](https://github.com/user-attachments/assets/49096bf0-eb45-4adb-bafb-11d2a8a7bd10)
+
+  <ul>
+    <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
+SquareFootage, and AnnualPropertyTax.</li>
+    <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
+    <ul>
+      <li>Dependant variable=MonthlyRent</li>
+      <li>Categorical variables=City, RentalType</li>
+      <li>Discrete variables=Year, Month, Bedrooms, SquareFootage, Admissions</li>
+      <li>Continuous variables=AnnualPropertyTax</li>
+    </ul>
+
+## Model Building
+<ul>
+    <li>Steps for model selection (both linear regression and random forest regressor):</li>
+    <ul>
+      <li>(1) Define target (y) and features (X) </li>
+      <li>(2) Encode categorical features</li>
+      <li>(3) Split data into training and testing sets, size=0.2</li>
+      <li>(4) Initialize, then train model</li>
+      <li>(5) Get model coefficients and intercept</li>
+      <li>(6) Make predictions on test set</li>
+      <li>(7) Evaluate model</li>
+      <li>(8) Perform k-fold cross-validation (k=5)</li>
+      </ul>
+    <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
+  </ul>
+  
+## Model Performance
+<b>Linear Regression Model:</b>
+  <ul>
+    <li><b>RMSE:</b> 114799.009005</li>
+    <li><b>R^2 Score:</b> 0.935382</li>
+   <li><b>Average MSE from Cross-Validation:</b> 626996.754116</li>
+    </ul>
+<b>Random Forest Regressor:</b>
+  <ul>
+    <li><b>RMSE:</b> 34611.563041</li>
+    <li><b>R^2 Score:</b> 0.980581</li>
+   <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
+    </ul>
+
+Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
+
+## Predictions
+![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
+
+![image](https://github.com/user-attachments/assets/df9238ad-b39d-4980-80db-531eb75f56d3)
+
+![image](https://github.com/user-attachments/assets/9b177835-2b3f-4a67-965d-f05782729f03)
+
+![image](https://github.com/user-attachments/assets/20560199-0a42-4c34-ac35-cef9e795058a)
+
+![image](https://github.com/user-attachments/assets/1e33eec0-f6db-4a03-a0b3-18add97aebf1)
+
+![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
+
+
+
