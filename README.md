@@ -3,7 +3,7 @@
   <ul>
     <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census Subdivisions (2016).</li>
     <li>Scraped data from Statistics Canada.</li>
-    <li>Generated synthetic rental price data using a com</li>
+    <li>Utilized statistical methods to see </li>
     <li>Performed Hyperparamter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
   </ul>
   
@@ -15,95 +15,92 @@
   </ul>
   
 ## Web Scraping
-Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+  <ul>
+<li><b>Dataset 1:</b> https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E </li>
+<li><b>Dataset 1 Selected variables (9):</b> </li> 
+      <ul>
+    <li>Census Division</li>
+    <li>Province</li>
+    <li>2016 Population</li>
+    <li>Post secondary credentials attainment rate</li>
+    <li>Average income</li>
+    <li>Unemployment rate</li>
+    <li>Visible Minority Rate</li>
+    <li>Indigenous Rate</li>
+    <li>Median Age</li>
+      </ul>
+<li><b>Dataset 2:</b> Add/Remove data - Components of population change by census division, 2016 boundaries </li>
+<li><b>Dataset 2 Selected variables (12): </b></li>
+    <ul>
+    <li>Mortality (2015-16, 2016-17, 2017-18, 2018-19)</li>
+    <li>Net inter and intraprovincial migration (2015-16, 2016-17, 2017-18, 2018-19)</li>
+    </ul>
+</ul>
+
 
 ## Feature Engineering
-The following ChatGPT prompt was used to generate our synthetic data:
-
-<i>Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:</i>
-
-<i><b>1.	Data Columns:</b>
 <ul>
-    <li>City: Major cities like Toronto, Vancouver, Montreal, Calgary, etc.</li>
-    <li>Province: Corresponding provinces (e.g., Ontario, British Columbia).</li>
-    <li>Libraries and Packages:</li>
-    <li>Year: From 2019 to 2023.</li>
-  <li>Month: January to December.</li>
-  <li>Rental Type: Apartment, Condo, Detached House, Townhouse.</li>
-  <li>Number of Bedrooms: 1, 2, 3, 4, etc.</li>
-  <li>Number of Bathrooms: 1, 2, 3, etc.</li>
-  <li>Square Footage: Ranges for different rental types.</li>
-  <li>Furnished: Yes/No.</li>
-  <li>Pet Friendly: Yes/No.</li>
-  <li>Parking Included: Yes/No.</li>
-  <li>Distance to City Center (km): Numeric value.</li>
-  <li>Monthly Rent (Target): Dependent variable, with realistic pricing trends.</li>
-  <li>Walk Score: A score between 0 and 100 indicating walkability.</li>
-  <li>Transit Score: A score between 0 and 100 indicating access to public transit.</li>
-  <li>Age of Building: Number of years since the building was constructed.</li>
-  <li>Energy Efficiency Rating: Numeric score (e.g., 0–10).</li>
-  <li>Lease Term: Length of the lease in months (e.g., 6, 12, 24).</li>
-  <li>Noise Level: Numeric score (e.g., 1–10, with 10 being very noisy).</li>
-  <li>Nearby Schools Rating: Average rating of schools in the area (1–10).</li>
-  <li>Internet Availability: Yes/No indicating high-speed internet availability.</li>
-  <li>Crime Rate Index: A score representing the area's safety.</li>
-  <li>Annual Property Tax: Approximation based on rent and location.</li>
-  </ul>
-
-
-<b>2.	Realism:</b>
-<ul>
-<li>Average monthly rent should reflect the general cost of living in each city. For example, Vancouver and Toronto should have higher average rents compared to Edmonton or Halifax.</li>
-<li>Include a range of rental prices within cities to capture variability (e.g., downtown areas vs. suburban neighborhoods).</li>
-<li>Use realistic distributions for rental prices, square footage, and proximity to transit. For instance, apartments should generally be smaller and less expensive than single-family homes.</li>
-</ul>
-
-<b>3.	Additional Notes:</b>
-<ul>
-<li>Include 10,000 rows of data distributed proportionally across cities.</li>
-<li>Reflect seasonality and trends where applicable (e.g., higher prices in Toronto and Vancouver for smaller units due to demand).</li>
-<li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
-</ul>
-</i>
-
-
-## Data Cleaning & Exploratory Data Analysis
+<li><b>New variables (9):</b></li> 
   <ul>
-    <li>Target Variable=MonthlyRent</li>
-    <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
-    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.</li>
+  <li>4-year average mortality</li>
+  <li>4-year average mortality per million people</li>
+  <li>Net migration (sum of net interprovincial and intraprovincial migration for 2015-16, 2016-17, 2017-18, 2018-19)</li>
+  <li>4-year average of calculated net migration</li>
+  <li>4-year average of calculated net migration per million people</li>
+  <li>POC rate (sum of Visible Minority and Indigenous rate) </li>
   </ul>
-  
-![image](https://github.com/user-attachments/assets/49096bf0-eb45-4adb-bafb-11d2a8a7bd10)
-
+<li><b>Categorized Variables (7):</b></li> 
   <ul>
-    <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
-SquareFootage, and AnnualPropertyTax.</li>
-    <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
-    <ul>
-      <li>Dependant variable=MonthlyRent</li>
-      <li>Categorical variables=City, RentalType</li>
-      <li>Discrete variables=Year, Month, Bedrooms, SquareFootage, Admissions</li>
-      <li>Continuous variables=AnnualPropertyTax</li>
-    </ul>
+  <li>Mig, Mort, Post.Sec, Un, VM, Ind, POC</li>
+  </ul>
+<li><b>Vairables of Interest: </b></li> 
+  <ul>
+  <li>Mig - 4-year average of calculated net migration per million people</li>
+  <li>Mort - 4-year average mortality per million people</li>
+  <li>Post.Sec - Post secondary credentials attainment rate</li>
+  <li>Avg.Inc - Average income</li>
+  <li>Un - Unemployment rate</li>
+  <li>VM - Visible minority rate</li>
+  <li>Ind - Indigenous rate</li>
+  <li>POC - Combined visible minority and Indigenous rate</li>
+  <li>Med.Age - Median age</li>
+  </ul>
+</ul>
 
 ## Model Building
 <ul>
-    <li>Steps for model selection (both linear regression and random forest regressor):</li>
+<li><b>Categorical Response Variable:</b></li> 
     <ul>
-      <li>(1) Define target (y) and features (X) </li>
-      <li>(2) Encode categorical features</li>
-      <li>(3) Split data into training and testing sets, size=0.2</li>
-      <li>(4) Initialize, then train model</li>
-      <li>(5) Get model coefficients and intercept</li>
-      <li>(6) Make predictions on test set</li>
-      <li>(7) Evaluate model</li>
-      <li>(8) Perform k-fold cross-validation (k=5)</li>
+      <li><b>Mig:</b></li> 
+      <ul>
+        <li>1 if average migration rate is below -5000</li>
+        <li>2 if average migration rate is between -5000 and -1000</li>
+        <li>3 if average migration rate is between -1000 and 1000</li>
+        <li>4 if average migration rate is between 1000 and 5000</li>
+        <li>5 if average migration rate is greater than 5000</li>
       </ul>
-    <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
-  </ul>
+    </ul>
+<li><b>Categorical Predictor Variables:</b></li> 
+   <ul>
+     <li><b>Mort:</b> 1 if average mortality rate is below 5000, 2 if average mortality rate is between 5000 and 7500 3 if average mortality rate is between 7500 and 10,000 4 if average mortalityrate is between 10,000 and 12,500 5 if average mortality rate is greater
+than 12,500</li> 
+     <li><b>Post.Sec:</b> 1 if post secondary credentials attainment rate is below 30%, 2 if post secondary credentials attainment rate is between 30-40%, 3 if post secondary credentials attainment rate is between 40-50%, 4 if post secondary credentials attainment rate is between 50-60%, 5 if post secondary credentials attainment rate is greater than 60%</li> 
+     <li><b>Un:</b> 1 if unemployment rate is below 5%, 2 if unemployment rate is between 5-10%, 3 if unemployment rate is between 10-15%, 4 if unemployment rate is between 15-20%, 5 if unemployment rate is greater than 20%</li> 
+     <li><b>VM:</b> 1 if Visible Minority rate is below 5%, 2 if Visible Minority rate is between 5-10%, 3 if Visible Minority rate is between 10-20%, 4 if Visible Minority rate is between 20-40%, 5 if Visible Minority rate is greater than 40%</li> 
+     <li><b>Ind:</b> 1 if Indigenous rate is below 5%, 2 if Indigenous rate is between 5-10%, 3 if Indigenous rate is between 10-20%, 4 if Indigenous rate is between 20-40%, 5 if Indigenous rate is greater than 40%</li> 
+     <li><b>POC:</b> 1 if POC rate is below 5%, 2 if POC rate is between 5-10%, 3 if POC rate is between 10-20%, 4 if POC rate is between 20-40%, 5 if POC rate is greater than 40%</li> 
+   </ul>
+<li><b>Continuous Predictor Variables:</b></li> 
+   <ul>
+     <li><b>Avg.Inc</b></li> 
+     <li><b>Med.Age</b></li> 
+   </ul>
+ </ul>   
+
+Ind, VM, and POC will be used as interaction variables on each variable of interest. 
+
   
-## Model Performance
+## R Analysis
 <b>Linear Regression Model:</b>
   <ul>
     <li><b>RMSE:</b> 114799.009005</li>
