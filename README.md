@@ -11,11 +11,7 @@
   <ul>
     <li><b>IDEs Used:</b> RStudio</li>
     <li><b>R Version:</b> rstudio-2021.09.1</li>
-    <li><b>Libraries and Packages:</b>
-    <ul>
-      <li><b><i>sklearn Packages:</i> </b> ColumnTransformer, Pipeline, StandardScaler, OneHotEncoder, train_test_split, LinearRegression, mean_squared_error, r2_score, RandomForestRegressor, make_scorer, cross_val_score, GridSearchCV</li>
-      <li><b> <i>Other Packages:</i> </b> pandas, files (from google.colab), seaborn</li>
-    </ul>
+    <li><b>Libraries:</b> car, spida2, effects, lattice, latticeExtra</li>
   </ul>
   
 ## Web Scraping
