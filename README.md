@@ -10,7 +10,7 @@
 ## Code and Resources Used
   <ul>
     <li><b>IDEs Used:</b> RStudio</li>
-    <li><b>R Version:</b> 3.10.12</li>
+    <li><b>R Version:</b> rstudio-2021.09.1</li>
     <li><b>Libraries and Packages:</b>
     <ul>
       <li><b><i>sklearn Packages:</i> </b> ColumnTransformer, Pipeline, StandardScaler, OneHotEncoder, train_test_split, LinearRegression, mean_squared_error, r2_score, RandomForestRegressor, make_scorer, cross_val_score, GridSearchCV</li>
