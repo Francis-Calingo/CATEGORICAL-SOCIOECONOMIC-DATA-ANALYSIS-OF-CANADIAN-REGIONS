@@ -2,9 +2,8 @@
 
   <ul>
     <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census Subdivisions (2016).</li>
-    <li>Scraped data from Statistics Canada.</li>
-    <li>Utilized statistical methods to see </li>
-    <li>Performed Hyperparamter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
+    <li>Scraped data from Statistics Canada. Census data taken from 2016 Census of Population, most socioeconomic data taken from 150.statcan.gc.ca.</li>
+    <li>Utilized statistical methods such as ANOVA, residual plotting, and p-value analysis. </li>
   </ul>
   
 ## Code and Resources Used
@@ -128,9 +127,13 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 <b>Methodology for each variable of interest:</b>
 <ul>
         <li><b>STEP 1:</b> Take main model: Mig ~ [variable of interest]</li>
-        <li><b>STEP 2: Make 5 test models, adding other variable of interest: Mig ~ [variable of interest]+[second variable of interest]</li>
+        <li><b>STEP 2:</b> Make 5 test models, adding other variable of interest: Mig ~ [variable of interest]+[second variable of interest]</li>
         <li><b>STEP 3:</b>Comment and compare test models with main model to see effects of adding variables, e.g. SEs (standard errors) and est.</li>
+        <li><b>SAMPLE:</b></li>
  </ul>
+ 
+ ![image](https://github.com/user-attachments/assets/1b17dab3-5ee7-49e5-a9de-af9dcdf81e97)
+
 
 <b>Effects of Other Variables on Mort:</b>
   <ul>
@@ -217,22 +220,91 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
       </ul>
 </ul>
 
+<b>Residual Plots and ANOVA:</b>
+<ul>
+  <li>Mig ~ Mort+Avg.Income</li>
 
-Mort as variable of interest
-Only seems acceptable to include in the model.
-glm(Mig ~ Mort+Avg.Income, family=binomial) [models]
+  ![image](https://github.com/user-attachments/assets/dd989c24-940a-4284-81e0-da4af0f7aa6a)
 
-Post Sec as variable of interest
-Can only use Avg inc and MedAge
+  ![image](https://github.com/user-attachments/assets/13f2c583-ca93-4d68-89a9-a44127d2149c)
 
-Avg Inc as variable of interest
-Use post sec and MedAge
+  ![image](https://github.com/user-attachments/assets/11db09cb-9328-47f5-bf3a-5a87a3b880cc)
 
-Un as variable of interest
-Only Post Sec could be used well
+  ![image](https://github.com/user-attachments/assets/985ecf41-1d4a-4bf3-b8c5-7202c40f7f32)
 
+  ![image](https://github.com/user-attachments/assets/bac041bf-b5c9-450b-94f1-d23f6ea5af72)
 
+  <li>Mig ~ Post.Sec+Avg.Income+MedAge</li>
 
+  ![image](https://github.com/user-attachments/assets/1eab38a5-57f3-4778-850b-acc26fa8bd8d)
+
+  ![image](https://github.com/user-attachments/assets/cb68c722-0125-4931-be93-2985adbb2e27)
+
+  ![image](https://github.com/user-attachments/assets/1deb9a6e-2af5-4bd0-8a42-cf3552f43536)
+
+  ![image](https://github.com/user-attachments/assets/08e5c1dd-0c8f-4a90-881c-741c0774a647)
+
+  ![image](https://github.com/user-attachments/assets/dcbf2adb-e4e1-4668-99b8-ac639a7cb75c)
+
+  <li>Mig ~ Mort+Avg.Income</li>
+
+  ![image](https://github.com/user-attachments/assets/cab919ca-45ce-4b43-bf5e-ace90ff02eb5)
+
+  ![image](https://github.com/user-attachments/assets/845f0fff-3c4c-47c6-9c8a-34470a651fb4)
+
+  ![image](https://github.com/user-attachments/assets/cc9c3432-576d-4434-8f53-aaff86466922)
+
+  ![image](https://github.com/user-attachments/assets/d9ef478c-d33d-435f-9667-603c11779ad3)
+
+  ![image](https://github.com/user-attachments/assets/20a4dca5-92f3-482d-bbd0-d1ca5b4aa7df)
+
+  <li>Mig ~ Avg.Income+Post.Sec+MedAge</li>
+
+  ![image](https://github.com/user-attachments/assets/0ef0907a-71a9-4cf3-ab15-7f86f6d8dcce)
+
+  ![image](https://github.com/user-attachments/assets/1e576eac-e671-41db-a96f-1df4f1cccf66)
+
+  ![image](https://github.com/user-attachments/assets/9332ff2c-961b-46b2-91fd-0bac1583255e)
+
+  ![image](https://github.com/user-attachments/assets/6cee7896-f10f-41ba-b23d-c9768b9093bb)
+
+  ![image](https://github.com/user-attachments/assets/ccad27d1-3e8d-4562-9186-0aa1094d5efd)
+
+  <li>Mig ~ Avg.Income+MedAge+Post.Sec</li>
+
+  ![image](https://github.com/user-attachments/assets/b2d6e865-17a6-4284-98a9-0d38a4c9994e)
+
+  ![image](https://github.com/user-attachments/assets/1af4213b-350e-4f16-925d-7822b7bcc0eb)
+
+  ![image](https://github.com/user-attachments/assets/a5d7b9ff-5b2e-4887-a195-4f668baf7af8)
+
+  ![image](https://github.com/user-attachments/assets/ca7f1e9c-8c4f-4254-931b-d51412b5d985)
+
+  ![image](https://github.com/user-attachments/assets/7ec308d0-02a0-473d-8fd3-cab2f5c78b1e)
+
+  <li>Mig ~ Un+Post.Sec</li>
+
+  ![image](https://github.com/user-attachments/assets/545edc8e-48a4-4b6a-a12f-18614d66d980)
+
+  ![image](https://github.com/user-attachments/assets/b60b1db6-2c00-4a38-9733-5cab49f60f99)
+
+  ![image](https://github.com/user-attachments/assets/8b7eb9f6-eb2d-4f20-8069-1532dd9503be)
+
+  ![image](https://github.com/user-attachments/assets/9976186a-a259-44a3-a458-660fd7d76f9d)
+
+  ![image](https://github.com/user-attachments/assets/924d8630-90bb-48ef-bbb9-0f78a7435417)
+
+  <li>Mig ~ MedAge+Mort</li>
+
+  ![image](https://github.com/user-attachments/assets/c4c289fa-5cc7-4dcc-824b-3d7851fcfe0a)
+
+  ![image](https://github.com/user-attachments/assets/d32d7933-8b29-4ea7-a3cc-fea1832ad851)
+
+  ![image](https://github.com/user-attachments/assets/545041d8-875b-4eb3-a9fa-ada93e6616ec)
+
+  ![image](https://github.com/user-attachments/assets/da2da47f-1e94-45f1-8f78-8ffda90b9aa4)
+
+  ![image](https://github.com/user-attachments/assets/f11ba0f9-d8a6-4f77-9e46-ed903c8e1bf6)
 
 ## Conclusion
 
