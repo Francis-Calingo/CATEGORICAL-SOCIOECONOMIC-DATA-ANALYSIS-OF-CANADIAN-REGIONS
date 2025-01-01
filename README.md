@@ -101,40 +101,36 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 
   
 ## R Analysis
-<b>Linear Regression Model:</b>
+
+<b>Investigating VM, Ind, and POC as Interaction Variables:</b>
   <ul>
-    <li><b>RMSE:</b> 114799.009005</li>
+    <li><b>Variable of interest:</b> Mort</li>
+      <ul>
+    <li><b>Models:</b> Mig ~ Mort*VM, Mig ~ Mort*Ind, Mig ~ Mort*POC,</li>
+    <li><b>p-values:</b> Consistently high for VM and POC, varied for Ind</li>
+    <li><b>Standard errors:</b> High for Ind</li>
+   <li><b>Conclusion:</b> Safe to only move forward with Ind for investigation. Due to high standard errors, Ind is not a good interaction variable for Mort.</li>
+      </ul>
+    <li><b>Other variables of interest:</b> Post.Sec, Avg.Income, Un, MedAge</li>
+    <ul>
+    <li><b>Models:</b> Mig ~ Post.Sec*Ind, Mig ~ Avg.Inc*Ind, Mig ~ Un*Ind,Mig ~ MedAge*Ind</li>
+    <li><b>Results:</b> </li>
+      <ul>
+        <li>Possible Hauck-Donner phenomenon for Post.Sec</li>
+        <li>Lower p-values and more acceptable standard errors for Avg.Income, but still not good enough</li>
+        <li>For third model, Only Ind2 has positive net mig.</li>
+        <li>For fourth model, Standard errors are low but not as low as in Avg.Income. P-values are still too high.</li>
+      </ul>
+   <li><b>Conclusion:</b> Ind would probably not be the best interaction variable to use. Ind to be included as some other kind of predictor variable.</li>
+    </ul>
+    </ul>
+
+<b>Effects of Other Variables on Mort:</b>
+  <ul>
+    <li><b>Models:</b> Mig ~ Mort, Mig ~ Mort+Post.Sec, Mig ~ Mort + Avg.Income, Mig ~ Mort+Un, Mort+MedAge, Mig ~ Mort+Ind,</li>
     <li><b>R^2 Score:</b> 0.935382</li>
    <li><b>Average MSE from Cross-Validation:</b> 626996.754116</li>
     </ul>
-<b>Random Forest Regressor:</b>
-  <ul>
-    <li><b>RMSE:</b> 34611.563041</li>
-    <li><b>R^2 Score:</b> 0.980581</li>
-   <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
-    </ul>
-Mig ~ Mort*Ind
-There is quite a lot of high p-values, implying that there is lack of statistical significance. However, I still do
-want to analyze the estimates. For VM, there is a lot of singularities for high-level Mort interacting on VM.
-Since most visible minorities settle in Canada’s biggest urban areas, and many big urban areas are assigned
-one census division each, most visible minority rates in many census divisions are negligible. Also, the larger
-urban areas tend to have higher net migration due to better economic opportunities, notwithstanding the
-contrasting socioeconomic conditions within urban areas. POC, as mentioned before, is the sum of VM and
-Ind. Therefore, it would be better to use Ind as interaction. There is quite a wide discrepancy when it
-comes to estimates for different mortality and Indigenous groups, implying that the effect on each group is
-vastly different. However, the high standard errors among many terms (along with the aforementioned high
-p-values) demonstrate that Ind would not be the best interaction variable for Mort.
-Mig ~ Post.Sec*Ind
-Possible Hauck-Donner phenomenon for Post.Sec
-Mig ~ Avg.Income*Ind
-Again there is discrepancy when it comes to each group, but the standard errors are much more acceptable.
-The p-values, while still not statistically significant, are much lower.
-Mig ~ Un*Ind
-Only Ind2 has positive net mig.
-Mig ~ MedAge*Ind
-Standard errors are low but not as low as in Avg.Income. P-values are still too high.
-So Ind would probably not be the best interaction variable to use. Therefore, Ind would have to be included
-as some other kind of predictor variable.
 
 Let’s investigate effects of other variables on Mort.
 When Post.Sec added, Mort doesn’t change SEs much, but changes estimates a lot (except for Mort2)
