@@ -125,84 +125,98 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
     </ul>
     </ul>
 
+<b>Methodology for each variable of interest:</b>
+<ul>
+        <li><b>STEP 1:</b> Take main model: Mig ~ [variable of interest]</li>
+        <li><b>STEP 2: Make 5 test models, adding other variable of interest: Mig ~ [variable of interest]+[second variable of interest]</li>
+        <li><b>STEP 3:</b>Comment and compare test models with main model to see effects of adding variables, e.g. SEs (standard errors) and est.</li>
+ </ul>
+
 <b>Effects of Other Variables on Mort:</b>
   <ul>
-    <li><b>Models:</b> Mig ~ Mort, Mig ~ Mort+Post.Sec, Mig ~ Mort + Avg.Income, Mig ~ Mort+Un, Mort+MedAge, Mig ~ Mort+Ind,</li>
-    <li><b>R^2 Score:</b> 0.935382</li>
-   <li><b>Average MSE from Cross-Validation:</b> 626996.754116</li>
-    </ul>
+    <li><b>Main Model:</b> Mig ~ Mort</li>
+    <li><b>Test Models:</b> Mig ~ Mort+Post.Sec, Mig ~ Mort + Avg.Income, Mig ~ Mort+Un, Mig ~ Mort+MedAge, Mig ~ Mort+Ind</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: When Post.Sec added, Mort doesn’t change SEs much, but changes estimates a lot (except for Mort2)</li>
+        <li>Second test model: After adding Avg.Income, SE changes minimally, Estimates greatly change.</li>
+        <li>Third test model: SE and Est minimal change.</li>
+        <li>Fourth test model: Estimates greatly change, SEs don’t.</li>
+        <li>Fifth test model: Estimates greatly change, SEs don’t.</li>
+      </ul>
+</ul>
 
-Let’s investigate effects of other variables on Mort.
-When Post.Sec added, Mort doesn’t change SEs much, but changes estimates a lot (except for Mort2)
-After adding Avg.Income, SE changes minimally, Estimates greatly change.
-SE and Est minimal change (Un)
-Estimates greatly change, SEs don’t. (MedAge)
-Estimates greatly change, SEs don’t. (Ind)
-Un independent of Mort (as expected, since unemployment doesn’t necessarily cause mortality rates.) Let’s
-look at Post Sec, Avg Income, Ind, and MedAge. Med Age could be mediator for mort (mortality is part
-of the median age calculation, and . Avg Income possible conf? (due to poorer people have less access to
-health services) Post.Sec doesn’t look independent nor collinear to Mort, but I struggle to find a plausible
-relationship between them. Ind could be a possible mediator. Of course, a high rate of Indigenous people
-people inside a community won’t be a direct push factor so I doubt it’s a confounder. However, it is a possible
-mediator, given that Indigenous people have a lower life expectancy than the general Canadian population
+<b>Effects of Other Variables on Post.Sec:</b>
+  <ul>
+    <li><b> Main Model:</b> Mig ~ Post.Sec</li>
+    <li><b>Test Models:</b> Mig ~ Post.Sec + Mort, Mig ~ Post.Sec + Avg.Income, Mig ~ Post.Sec + Un, Mig ~ Post.Sec+MedAge, Mig ~ Post.Sec+Ind</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: Minimal change for both Est and SEs, but big change for Post.Sec.2</li>
+        <li>Second test model: Est greatly change, not so much for Standard Errors.</li>
+        <li>Third test model: Est change varies, but est mostly unchanged. SEs are also unchanged. assume independent.</li>
+        <li>Fourth test model: Est greatly changes, not so much for SEs.</li>
+        <li>Fifth test model: Est greatly changes, not so much for SEs.</li>
+      </ul>
+</ul>
 
-Let’s investigate effects of other variables on Post Sec
+<b>Effects of Other Variables on Avg.Income:</b>
+  <ul>
+    <li><b> Main Model:</b> Mig ~ Avg.Income</li>
+    <li><b> Test Models:</b> Mig ~ Avg.Income + Mort, Mig ~ Avg.Income + Avg.Income, Mig ~ Avg.Income + Un, Mig ~ Avg.Income+MedAge, Mig ~ Avg.Income+Ind</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: This confirms that Average income and mort are ind.</li>
+        <li>Second test model: Est changes a lot.</li>
+        <li>Third test model: Est changes not as much as before. Assume independence.</li>
+        <li>Fourth test model: Est changes greatly.</li>
+        <li>Fifth test model: Minimal change in est and SEs. Independent.</li>
+      </ul>
+</ul>
 
-Minimal change for both Est and SEs, but big change for Post.Sec.2 (Mort)
-Est greatly change, not so much for Standard Errors. (Avg income)
-Est change varies, but est mostly unchanged. SEs are also unchanged. assume independent. (Un)
-Est greatly changes, not so much for SEs. (MedAge)
-Est greatly changes, not so much for SEs. (Ind)
-Let’s look at Avg.Income, MedAge, and Ind. Avg.Income could be a confounding factor for Post.Sec, as
-income could affect one’s ability to access education. For MedAge, it could be a confounder but not a strong
-one since while lower median age means more college-aged people, that doesn’t mean higher post secondary
-graduation rate. For Avg.Income, it could be a confounder since it could both be a picture of economic
-conditions for a geographical area (leading it to be a push factor) and could demonstrate that low-income
-people are less likely to be able to access education. For Ind, it appears to be either a mediator or confounder
-for Post.Sec.
 
-Let’s investigate effects of other variables on Avg Inc
+<b>Effects of Other Variables on Un:</b>
+  <ul>
+    <li><b> Main Model:</b> Mig ~ Un</li>
+    <li><b> Test Models:</b> Mig ~ Un + Mort, Mig ~ Un + Post.Sec, Mig ~ Un + Avg.Income, Mig ~ Un + MedAge, Mig ~ Un + Ind</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: Again all except Un2 has minimal est change.</li>
+        <li>Second test model: Massive change in Est not so much in SE.</li>
+        <li>Third test model: No Significant change in Est.</li>
+        <li>Fourth test model: All except Un2 no significant change.</li>
+        <li>Fifth test model: Massive change in Est not so much in SE.</li>
+      </ul>
+</ul>
 
-This confirms that Average income and mort are ind. (Mort)
-Est changes a lot (Post Sec)
-Est changes not as much as before. Assume independence. (Un)
-Est changes greatly. (MedAge)
-Minimal change in est and SEs. Independent. (Ind)
-Let’s focus on Post.Sec and MedAge. MedAge could be a possible confounder, though maybe not as strong.
-Older people would have accumulated more wealth in general than younger people, but that’s not always
-the case. Post.Sec could be a confounder, since it’s both a plausible push factor and also illustrates that
-post-secondary graduation tend to lead to better-paying jobs.
+<b>Effects of Other Variables on MedAge:</b>
+  <ul>
+    <li><b> Main Model:</b> Mig ~ MedAge</li>
+    <li><b> Test Models:</b> Mig ~ MedAge + Mort, Mig ~ MedAge + Post.Sec, Mig ~ MedAge + Avg.Income, Mig ~ MedAge + Un, Mig ~ MedAge + Ind</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: Sig in Est change not so much SE.</li>
+        <li>Second test model: Not as big of a change with est.</li>
+        <li>Third test model: Little changes.</li>
+        <li>Fourth test model: Little changes.</li>
+        <li>Fifth test model: Little changes.</li>
+      </ul>
+</ul>
 
-Let’s investigate effects of other variables on Un
+<b>Effects of Other Variables on Ind:</b>
+  <ul>
+    <li><b> Main Model:</b> Mig ~ MedAge</li>
+    <li><b> Test Models:</b> Mig ~ Ind + Mort, Mig ~ Ind + Post.Sec, Mig ~ Ind + Avg.Income, Mig ~ Ind + Un, Mig ~ Ind + MedAge</li>
+    <li><b>Results:</b></li>
+    <ul>
+        <li>First test model: All except Ind2 sees minimal change in Est.</li>
+        <li>Second test model: Minimal change in Est. Independent.</li>
+        <li>Third test model: Minimal change in Est. Independent.</li>
+        <li>Fourth test model: All except Ind2 see minimal change in Est.</li>
+        <li>Fifth test model: All except Ind2 see minimal change in Est.</li>
+      </ul>
+</ul>
 
-Again all except Un2 has minimal est change (Mort)
-Massive change in Est not so much in SE (Post sec)
-No Significant change in Est (Avg income)
-All except Un2 no significant change (MedAge)
-Massive change in Est not so much in SE (Ind)
-It seems that Un is largely independent of other variables except for Post.Sec and Ind. I can see Post.Sec being
-a confounder for Un since many job opportunities require post-secondary credentials, and post-secondary
-opportunities is in itself a push factor. Ind can’t be a push factor in itself, so it might be a mediator for Un.
-
-Let’s investigate effects of other variables on MedAge
-
-Sig in Est change not so much SE (Mort)
-Not as big of a change with est (PostSec)
-Little changes (Avg Income)
-Little changes (Un)
-Little changes (Ind)
-MedAge and Mort could be conf or mediators of each other. MedAge could’ve been a mediator for Mort, so
-it would mean that Mort is a conf for MedAge.
-
-Let’s investigate effects of other variables on Ind.
-
-All except Ind2 sees minimal change in Est. (Mort)
-Minimal change in Est. Independent. (Post Sec)
-Minimal change in Est. Independent. (Avg income)
-All except Ind2 see minimal change in Est. (Un)
-All except Ind2 see minimal change in Est. (MedAge)
-It seems that Ind is also not a good variable of interest, which is no surprise since, as mentioned before, Ind
-can’t be a direct push factor.
 
 Mort as variable of interest
 Only seems acceptable to include in the model.
