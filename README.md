@@ -1,7 +1,7 @@
-# PROJECT OVERVIEW: Categorical Data Analysis Using R (Canadian Census Subdivisions)
+# PROJECT OVERVIEW: Categorical Data Analysis Using R (Canadian Census Divisions)
 
   <ul>
-    <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census Subdivisions (2016).</li>
+    <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census divisions (2016).</li>
     <li>Scraped data from Statistics Canada. Census data taken from 2016 Census of Population, most socioeconomic data taken from 150.statcan.gc.ca.</li>
     <li>Utilized statistical methods such as ANOVA, residual plotting, and p-value analysis. </li>
   </ul>
@@ -28,7 +28,7 @@
     <li>Indigenous Rate</li>
     <li>Median Age</li>
       </ul>
-<li><b>Dataset 2:</b> Add/Remove data - Components of population change by census division, 2016 boundaries </li>
+<li><b>Dataset 2:</b> https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014001  </li>
 <li><b>Dataset 2 Selected variables (12): </b></li>
     <ul>
     <li>Mortality (2015-16, 2016-17, 2017-18, 2018-19)</li>
