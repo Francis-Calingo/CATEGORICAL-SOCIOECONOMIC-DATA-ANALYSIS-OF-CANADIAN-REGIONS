@@ -52,7 +52,7 @@
   <ul>
   <li>Mig, Mort, Post.Sec, Un, VM, Ind, POC</li>
   </ul>
-<li><b>Vairables of Interest: </b></li> 
+<li><b>Variables of Interest: </b></li> 
   <ul>
   <li>Mig - 4-year average of calculated net migration per million people</li>
   <li>Mort - 4-year average mortality per million people</li>
@@ -81,7 +81,7 @@
     </ul>
 <li><b>Categorical Predictor Variables:</b></li> 
    <ul>
-     <li><b>Mort:</b> 1 if average mortality rate is below 5000, 2 if average mortality rate is between 5000 and 7500 3 if average mortality rate is between 7500 and 10,000 4 if average mortalityrate is between 10,000 and 12,500 5 if average mortality rate is greater
+     <li><b>Mort:</b> 1 if average mortality rate is below 5000, 2 if average mortality rate is between 5000 and 7500 3 if average mortality rate is between 7500 and 10,000 4 if average mortality rate is between 10,000 and 12,500 5 if average mortality rate is greater
 than 12,500</li> 
      <li><b>Post.Sec:</b> 1 if post secondary credentials attainment rate is below 30%, 2 if post secondary credentials attainment rate is between 30-40%, 3 if post secondary credentials attainment rate is between 40-50%, 4 if post secondary credentials attainment rate is between 50-60%, 5 if post secondary credentials attainment rate is greater than 60%</li> 
      <li><b>Un:</b> 1 if unemployment rate is below 5%, 2 if unemployment rate is between 5-10%, 3 if unemployment rate is between 10-15%, 4 if unemployment rate is between 15-20%, 5 if unemployment rate is greater than 20%</li> 
