@@ -1,6 +1,6 @@
 # PROJECT OVERVIEW: Categorical Data Analysis Using R (Canadian Census Divisions)
 
- ## Table of Contents
+## Table of Contents
 * [Introduction](#introduction)
 * [Code and Resources Used](#code-and-resources-used)
 * [Web Scraping](#web-scraping)
