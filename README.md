@@ -1,5 +1,16 @@
 # PROJECT OVERVIEW: Categorical Data Analysis Using R (Canadian Census Divisions)
 
+ ## Table of Contents
+* [Introduction](#introduction)
+* [Code and Resources Used](#code-and-resources-used)
+* [Web Scraping](#web-scraping)
+* [Feature Engineering](#feature-engineering)
+* [Model Building](#model-building)
+* [R Analysis](#r-analysis)
+* [Conclusion](#conclusion)
+
+## Introduction
+
   <ul>
     <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census divisions (2016).</li>
     <li>Scraped data from Statistics Canada. Census data taken from 2016 Census of Population, most socioeconomic data taken from 150.statcan.gc.ca.</li>
