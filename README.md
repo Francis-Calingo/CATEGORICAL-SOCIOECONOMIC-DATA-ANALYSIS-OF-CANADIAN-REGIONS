@@ -9,22 +9,29 @@
 * [R Analysis](#r-analysis)
 * [Conclusion](#conclusion)
 
-## Introduction
+<details><summary><h2>Introduction</h2></summary> 
 
   <ul>
     <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census divisions (2016).</li>
     <li>Scraped data from Statistics Canada. Census data taken from 2016 Census of Population, most socioeconomic data taken from 150.statcan.gc.ca.</li>
     <li>Utilized statistical methods such as ANOVA, residual plotting, and p-value analysis. </li>
   </ul>
-  
-## Code and Resources Used
+
+</details>
+
+<details><summary><h2>Code and Resources Used</h2></summary> 
+
   <ul>
     <li><b>IDEs Used:</b> RStudio</li>
     <li><b>R Version:</b> rstudio-2021.09.1</li>
     <li><b>Libraries:</b> car, spida2, effects, lattice, latticeExtra</li>
   </ul>
   
-## Web Scraping
+</details>
+
+
+<details><summary><h2>Web Scraping</h2></summary> 
+  
   <ul>
 <li><b>Dataset 1:</b> https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E </li>
 <li><b>Dataset 1 Selected variables (9):</b> </li> 
@@ -46,9 +53,12 @@
     <li>Net inter and intraprovincial migration (2015-16, 2016-17, 2017-18, 2018-19)</li>
     </ul>
 </ul>
+  
+</details>
 
 
-## Feature Engineering
+<details><summary><h2>Feature Engineering</h2></summary> 
+
 <ul>
 <li><b>New variables (9):</b></li> 
   <ul>
@@ -77,7 +87,9 @@
   </ul>
 </ul>
 
-## Model Building
+</details> 
+<details><summary><h2>Model Building</h2></summary> 
+
 <ul>
 <li><b>Categorical Response Variable:</b></li> 
     <ul>
@@ -109,8 +121,11 @@ than 12,500</li>
 
 Ind, VM, and POC will be used as interaction variables on each variable of interest. 
 
-  
-## R Analysis
+</details>
+
+
+
+<details><summary><h2>R Analysis</h2></summary> 
 
 <b>Investigating VM, Ind, and POC as Interaction Variables:</b>
   <ul>
@@ -317,9 +332,12 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 
   ![image](https://github.com/user-attachments/assets/f11ba0f9-d8a6-4f77-9e46-ed903c8e1bf6)
 
-## Conclusion
+</details>
+
+<details><summary><h2>Conclusion</h2></summary> 
 
 It appears that, based on the p-values and the coefficient estimates, that average income and post-secondary
 opportunities have the biggest influence on out-migration. That makes sense, since average income is tied
 to economic opportunities, and post-secondary opportunities are tied to job prospects.
 
+</details>
