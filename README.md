@@ -29,6 +29,7 @@ An interactive Tableau dashboard used to report and explore sales trends can be 
 
 # Data Structure and Initial Checks
 
+10,878 entries (294 records x 37 fields)
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
 - **Table 2:**
 - **Table 3:**
