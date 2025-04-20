@@ -17,13 +17,14 @@ Insights and recommendations are provided on the following key areas:
 - **Category 1:** 
 - **Category 2:** 
 - **Category 3:** 
-- **Category 4:** 
+- **Category 4:**
 
-The SQL queries used to inspect and clean the data for this analysis can be found here [link].
+The following is the R Script used for the quantitative analysis portion of the reporting: Link to see script
+    <li><b>IDEs Used:</b> RStudio</li>
+    <li><b>R Version:</b> rstudio-2021.09.1</li>
+    <li><b>Libraries:</b> car, spida2, effects, lattice, latticeExtra</li>
 
-Targed SQL queries regarding various business questions can be found here [link].
-
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
+The following is the report: [Link to download.]()
 
 [click me to download](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/raw/refs/heads/main/Census_Division_Stats_-_Sheet1.csv)
 
@@ -153,11 +154,6 @@ Throughout the analysis, multiple assumptions were made to manage challenges wit
 
 <details><summary><h2>Code and Resources Used</h2></summary> 
 
-  <ul>
-    <li><b>IDEs Used:</b> RStudio</li>
-    <li><b>R Version:</b> rstudio-2021.09.1</li>
-    <li><b>Libraries:</b> car, spida2, effects, lattice, latticeExtra</li>
-  </ul>
   
 </details>
 
