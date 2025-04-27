@@ -28,6 +28,13 @@ The following is the report: [Link to download.]()
 
 [click me to download](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/raw/refs/heads/main/Census_Division_Stats_-_Sheet1.csv)
 
+To fork this repository:
+
+```bash
+git clone https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS.git
+cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
+```
+
 # Data Structure and Initial Checks
 
 10,878 entries (294 records x 37 fields)
