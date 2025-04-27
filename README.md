@@ -7,7 +7,9 @@
 * [Insights Deep Dive](#insights-deep-dive)
 * [Recommendations](#recommendations)
 * [Assumptions and Caveats](#assumptions-and-caveats)
+* [Credits and Acknowlegements](#credits-and-acknowledgements)
 
+---
 
 # Project Background
 Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
@@ -35,6 +37,8 @@ git clone https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANAL
 cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
 ```
 
+---
+
 # Data Structure and Initial Checks
 
 10,878 entries (294 records x 37 fields)
@@ -46,7 +50,7 @@ The companies main database structure as seen below consists of four tables: tab
 
 [Entity Relationship Diagram here]
 
-
+---
 
 # Executive Summary
 
@@ -56,7 +60,7 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 
 [Visualization, including a graph of overall trends or snapshot of a dashboard]
 
-
+---
 
 # Insights Deep Dive
 ### Category 1:
@@ -110,7 +114,7 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 
 [Visualization specific to category 4]
 
-
+---
 
 # Recommendations:
 
@@ -126,7 +130,7 @@ Based on the insights and findings above, we would recommend the [stakeholder te
   
 * Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
   
-
+---
 
 # Assumptions and Caveats:
 
@@ -137,6 +141,12 @@ Throughout the analysis, multiple assumptions were made to manage challenges wit
 * Assumption 1 (ex: data for December 2021 was missing - this was imputed using a combination of historical trends and December 2020 data)
   
 * Assumption 1 (ex: because 3% of the refund date column contained non-sensical dates, these were excluded from the analysis)
+
+---
+
+# Credits and Acknowledgements
+
+Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown.org, https://bookdown.org/yihui/rmarkdown-cookbook/
 
 ============================================================
 
