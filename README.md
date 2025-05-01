@@ -12,7 +12,13 @@
 ---
 
 # Project Background
-Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
+Canada’s census divisions are a sub-national geographic division whose sole purpose is for statistical enumeration for Canada’s demi-decennial census. They are not tied to any government body, but can sometimes completely overlap with other geographical divisions such as an entire territory or an entire municipality.
+
+Therefore, from a public policy perspective, conducting statistical analyses on a census division-by-census division level has little merit because there are no governmental bodies for census divisions themselves. However, the findings can still surface valuable insights for both Statistics Canada as well as communities in each division. For Statistics Canada, the socioeconomic data by division will not necessarily compel them to redraw boundaries in certain ways, but it would help them understand the communities better and therefore help guide their data collection methodologies better.
+
+More importantly, the findings would be of value for municipal-level governments, especially from more isolated and/or other divisions. By better understanding socioeconomic patterns in the census division they’re part of, they could also better understand whether their socioeconomic experience is unique or is largely in line with other communities in their area.
+
+Using Statistics Canada's data for Census divisions (2016), this project analyzes relationships between several socioeconomic variables (e.g., average income, education levels) and ascertains which ones had the biggest causal relationship on out-migration. Statistical methods such as ANOVA, residual plotting, and p-value analysis were employed.
 
 Insights and recommendations are provided on the following key areas:
 
