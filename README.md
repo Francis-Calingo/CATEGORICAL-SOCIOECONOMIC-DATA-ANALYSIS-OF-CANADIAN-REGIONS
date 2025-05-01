@@ -118,17 +118,23 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 
 # Recommendations:
 
-Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following: 
+Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:
 
-* Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
-  
-* Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
-  
-* Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
-  
-* Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
-  
-* Specific observation that is related to a recommended action. **Recommendation or general guidance based on this observation.**
+* There is a strong causal relationship between out-migration and educational attainment levels. It could be due to the fact that people are leaving for better educational opportunities (i.e., post-secondary education) and not returning. Of course, we would not expect communities from every census division to advocate for the construction of large-scale colleges or universities in their territories, but other measures could be considered:
+
+  * **Ameliorate opportunities for those with the educational background** to entice them to come to their communities (e.g., more specialized careers, financial incentives)
+ 
+  * **Develop partnerships with major colleges and universities**, where students may have an opportunity to travel to certain communities and contribute to the economy, whether through internships, co-op opportunities, or other means.
+ 
+  * **Attract skilled immigrants.** This is an opportunity for communities that traditionally have not had a history of recent immigration to advertise themselves as better alternatives to major cities, where certain negative factors such as the higher cost of living are heightened.
+
+* Income was also observed to have a very strong causal relationship with out-migration. This could be due to lack of certain job opportunities being push factors for people leaving as they seek better job opportunities. As with educational opportunities, we would not expect more isolated and smaller communities to start competing with the country’s leading economies such as Toronto’s, but there are opportunities for such communities to create pull factors:
+
+  * **Intensify the diversification of their economies.** This is especially important for regions dependent on singular industries such as forestry and fishing.
+ 
+  * **Develop poverty-reduction measures** such as raising the minimum wage and experimenting with basic income pilot projects, which would give lower-income communities greater financial fluidity and allow them to focus more on advancing their careers as opposed to constantly worrying about not meeting their basic needs.
+ 
+  * **Reduce accessibility barriers.** Whether due to lack of accommodations in the workplace or lack of adequate transportation infrastructure that would help facilitate ease of commuting for workers, or other factors, barriers that, at worst, prevents people from applying to certain jobs, and, at best, are hindrances to a good quality of life, and they must be at least mitigated, if not eradicated entirely.
   
 ---
 
@@ -136,7 +142,7 @@ Based on the insights and findings above, we would recommend the [stakeholder te
 
 Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
 
-* Assumption 1 (ex: missing country records were for customers based in the US, and were re-coded to be US citizens)
+* Census divisions can often encompass entire cities (e.g., Toronto, Montreal). It is of course not correct to assume that the socioeconomic realities of major cities are monolithic, but that is something that had to be assumed for this analysis due to the limitations placed by the geographic layout of census divisions. Other geographic units such as electoral districts may be more appropriate for dealing with that.
   
 * Assumption 1 (ex: data for December 2021 was missing - this was imputed using a combination of historical trends and December 2020 data)
   
