@@ -2,7 +2,7 @@
 
 # Table of Contents
 * [Project Background](#project-background)
-* [Data Structure and Initial Checks](#data-structure-and-initial-checks)
+* [Data Structure and Model Building](#data-structure-and-model-building)
 * [Executive Summary](#executive-summary)
 * [Insights Deep Dive](#insights-deep-dive)
 * [Recommendations](#recommendations)
@@ -22,10 +22,8 @@ Using Statistics Canada's data for Census divisions (2016), this project analyze
 
 Insights and recommendations are provided on the following key areas:
 
-- **Category 1:** 
-- **Category 2:** 
-- **Category 3:** 
-- **Category 4:**
+- **Demographics** 
+- **Labour and Education** 
 
 The following is the R Script used for the quantitative analysis portion of the reporting: Link to see script
     <li><b>IDEs Used:</b> RStudio</li>
@@ -45,7 +43,7 @@ cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
 
 ---
 
-# Data Structure and Initial Checks
+# Data Structure and Model Building
 
 10,878 entries (294 records x 37 fields)
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
@@ -55,6 +53,91 @@ The companies main database structure as seen below consists of four tables: tab
 - **Table 5:**
 
 [Entity Relationship Diagram here]
+
+### Web Scraping:
+  <ul>
+<li><b>Dataset 1:</b> https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E </li>
+<li><b>Dataset 1 Selected variables (9):</b> </li> 
+      <ul>
+    <li>Census Division</li>
+    <li>Province</li>
+    <li>2016 Population</li>
+    <li>Post secondary credentials attainment rate</li>
+    <li>Average income</li>
+    <li>Unemployment rate</li>
+    <li>Visible Minority Rate</li>
+    <li>Indigenous Rate</li>
+    <li>Median Age</li>
+      </ul>
+<li><b>Dataset 2:</b> https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014001  </li>
+<li><b>Dataset 2 Selected variables (12): </b></li>
+    <ul>
+    <li>Mortality (2015-16, 2016-17, 2017-18, 2018-19)</li>
+    <li>Net inter and intraprovincial migration (2015-16, 2016-17, 2017-18, 2018-19)</li>
+    </ul>
+</ul>
+
+### Feature Engineering:
+<ul>
+<li><b>New variables (9):</b></li> 
+  <ul>
+  <li>4-year average mortality</li>
+  <li>4-year average mortality per million people</li>
+  <li>Net migration (sum of net interprovincial and intraprovincial migration for 2015-16, 2016-17, 2017-18, 2018-19)</li>
+  <li>4-year average of calculated net migration</li>
+  <li>4-year average of calculated net migration per million people</li>
+  <li>POC rate (sum of Visible Minority and Indigenous rate) </li>
+  </ul>
+<li><b>Categorized Variables (7):</b></li> 
+  <ul>
+  <li>Mig, Mort, Post.Sec, Un, VM, Ind, POC</li>
+  </ul>
+<li><b>Variables of Interest: </b></li> 
+  <ul>
+  <li>Mig - 4-year average of calculated net migration per million people</li>
+  <li>Mort - 4-year average mortality per million people</li>
+  <li>Post.Sec - Post secondary credentials attainment rate</li>
+  <li>Avg.Inc - Average income</li>
+  <li>Un - Unemployment rate</li>
+  <li>VM - Visible minority rate</li>
+  <li>Ind - Indigenous rate</li>
+  <li>POC - Combined visible minority and Indigenous rate</li>
+  <li>Med.Age - Median age</li>
+  </ul>
+</ul>
+
+### Model Building:
+
+<ul>
+<li><b>Categorical Response Variable:</b></li> 
+    <ul>
+      <li><b>Mig:</b></li> 
+      <ul>
+        <li>1 if average migration rate is below -5000</li>
+        <li>2 if average migration rate is between -5000 and -1000</li>
+        <li>3 if average migration rate is between -1000 and 1000</li>
+        <li>4 if average migration rate is between 1000 and 5000</li>
+        <li>5 if average migration rate is greater than 5000</li>
+      </ul>
+    </ul>
+<li><b>Categorical Predictor Variables:</b></li> 
+   <ul>
+     <li><b>Mort:</b> 1 if average mortality rate is below 5000, 2 if average mortality rate is between 5000 and 7500 3 if average mortality rate is between 7500 and 10,000 4 if average mortality rate is between 10,000 and 12,500 5 if average mortality rate is greater
+than 12,500</li> 
+     <li><b>Post.Sec:</b> 1 if post secondary credentials attainment rate is below 30%, 2 if post secondary credentials attainment rate is between 30-40%, 3 if post secondary credentials attainment rate is between 40-50%, 4 if post secondary credentials attainment rate is between 50-60%, 5 if post secondary credentials attainment rate is greater than 60%</li> 
+     <li><b>Un:</b> 1 if unemployment rate is below 5%, 2 if unemployment rate is between 5-10%, 3 if unemployment rate is between 10-15%, 4 if unemployment rate is between 15-20%, 5 if unemployment rate is greater than 20%</li> 
+     <li><b>VM:</b> 1 if Visible Minority rate is below 5%, 2 if Visible Minority rate is between 5-10%, 3 if Visible Minority rate is between 10-20%, 4 if Visible Minority rate is between 20-40%, 5 if Visible Minority rate is greater than 40%</li> 
+     <li><b>Ind:</b> 1 if Indigenous rate is below 5%, 2 if Indigenous rate is between 5-10%, 3 if Indigenous rate is between 10-20%, 4 if Indigenous rate is between 20-40%, 5 if Indigenous rate is greater than 40%</li> 
+     <li><b>POC:</b> 1 if POC rate is below 5%, 2 if POC rate is between 5-10%, 3 if POC rate is between 10-20%, 4 if POC rate is between 20-40%, 5 if POC rate is greater than 40%</li> 
+   </ul>
+<li><b>Continuous Predictor Variables:</b></li> 
+   <ul>
+     <li><b>Avg.Inc</b></li> 
+     <li><b>Med.Age</b></li> 
+   </ul>
+ </ul>   
+
+Ind, VM, and POC will be used as interaction variables on each variable of interest. 
 
 ---
 
@@ -151,8 +234,7 @@ Throughout the analysis, multiple assumptions were made to manage challenges wit
 * Census divisions can often encompass entire cities (e.g., Toronto, Montreal). It is of course not correct to assume that the socioeconomic realities of major cities are monolithic, but that is something that had to be assumed for this analysis due to the limitations placed by the geographic layout of census divisions. Other geographic units such as electoral districts may be more appropriate for dealing with that.
   
 * Assumption 1 (ex: data for December 2021 was missing - this was imputed using a combination of historical trends and December 2020 data)
-  
-* Assumption 1 (ex: because 3% of the refund date column contained non-sensical dates, these were excluded from the analysis)
+
 
 ---
 
@@ -173,11 +255,7 @@ Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown
 
 <details><summary><h2>Introduction</h2></summary> 
 
-  <ul>
-    <li>Analyze relationships between several socioeconomic variables (e.g., average income, education levels) using Canada's Census divisions (2016).</li>
-    <li>Scraped data from Statistics Canada. Census data taken from 2016 Census of Population, most socioeconomic data taken from 150.statcan.gc.ca.</li>
-    <li>Utilized statistical methods such as ANOVA, residual plotting, and p-value analysis. </li>
-  </ul>
+
 
 </details>
 
@@ -189,94 +267,19 @@ Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown
 
 <details><summary><h2>Web Scraping</h2></summary> 
   
-  <ul>
-<li><b>Dataset 1:</b> https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E </li>
-<li><b>Dataset 1 Selected variables (9):</b> </li> 
-      <ul>
-    <li>Census Division</li>
-    <li>Province</li>
-    <li>2016 Population</li>
-    <li>Post secondary credentials attainment rate</li>
-    <li>Average income</li>
-    <li>Unemployment rate</li>
-    <li>Visible Minority Rate</li>
-    <li>Indigenous Rate</li>
-    <li>Median Age</li>
-      </ul>
-<li><b>Dataset 2:</b> https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014001  </li>
-<li><b>Dataset 2 Selected variables (12): </b></li>
-    <ul>
-    <li>Mortality (2015-16, 2016-17, 2017-18, 2018-19)</li>
-    <li>Net inter and intraprovincial migration (2015-16, 2016-17, 2017-18, 2018-19)</li>
-    </ul>
-</ul>
+
   
 </details>
 
 
 <details><summary><h2>Feature Engineering</h2></summary> 
 
-<ul>
-<li><b>New variables (9):</b></li> 
-  <ul>
-  <li>4-year average mortality</li>
-  <li>4-year average mortality per million people</li>
-  <li>Net migration (sum of net interprovincial and intraprovincial migration for 2015-16, 2016-17, 2017-18, 2018-19)</li>
-  <li>4-year average of calculated net migration</li>
-  <li>4-year average of calculated net migration per million people</li>
-  <li>POC rate (sum of Visible Minority and Indigenous rate) </li>
-  </ul>
-<li><b>Categorized Variables (7):</b></li> 
-  <ul>
-  <li>Mig, Mort, Post.Sec, Un, VM, Ind, POC</li>
-  </ul>
-<li><b>Variables of Interest: </b></li> 
-  <ul>
-  <li>Mig - 4-year average of calculated net migration per million people</li>
-  <li>Mort - 4-year average mortality per million people</li>
-  <li>Post.Sec - Post secondary credentials attainment rate</li>
-  <li>Avg.Inc - Average income</li>
-  <li>Un - Unemployment rate</li>
-  <li>VM - Visible minority rate</li>
-  <li>Ind - Indigenous rate</li>
-  <li>POC - Combined visible minority and Indigenous rate</li>
-  <li>Med.Age - Median age</li>
-  </ul>
-</ul>
+
 
 </details> 
 <details><summary><h2>Model Building</h2></summary> 
 
-<ul>
-<li><b>Categorical Response Variable:</b></li> 
-    <ul>
-      <li><b>Mig:</b></li> 
-      <ul>
-        <li>1 if average migration rate is below -5000</li>
-        <li>2 if average migration rate is between -5000 and -1000</li>
-        <li>3 if average migration rate is between -1000 and 1000</li>
-        <li>4 if average migration rate is between 1000 and 5000</li>
-        <li>5 if average migration rate is greater than 5000</li>
-      </ul>
-    </ul>
-<li><b>Categorical Predictor Variables:</b></li> 
-   <ul>
-     <li><b>Mort:</b> 1 if average mortality rate is below 5000, 2 if average mortality rate is between 5000 and 7500 3 if average mortality rate is between 7500 and 10,000 4 if average mortality rate is between 10,000 and 12,500 5 if average mortality rate is greater
-than 12,500</li> 
-     <li><b>Post.Sec:</b> 1 if post secondary credentials attainment rate is below 30%, 2 if post secondary credentials attainment rate is between 30-40%, 3 if post secondary credentials attainment rate is between 40-50%, 4 if post secondary credentials attainment rate is between 50-60%, 5 if post secondary credentials attainment rate is greater than 60%</li> 
-     <li><b>Un:</b> 1 if unemployment rate is below 5%, 2 if unemployment rate is between 5-10%, 3 if unemployment rate is between 10-15%, 4 if unemployment rate is between 15-20%, 5 if unemployment rate is greater than 20%</li> 
-     <li><b>VM:</b> 1 if Visible Minority rate is below 5%, 2 if Visible Minority rate is between 5-10%, 3 if Visible Minority rate is between 10-20%, 4 if Visible Minority rate is between 20-40%, 5 if Visible Minority rate is greater than 40%</li> 
-     <li><b>Ind:</b> 1 if Indigenous rate is below 5%, 2 if Indigenous rate is between 5-10%, 3 if Indigenous rate is between 10-20%, 4 if Indigenous rate is between 20-40%, 5 if Indigenous rate is greater than 40%</li> 
-     <li><b>POC:</b> 1 if POC rate is below 5%, 2 if POC rate is between 5-10%, 3 if POC rate is between 10-20%, 4 if POC rate is between 20-40%, 5 if POC rate is greater than 40%</li> 
-   </ul>
-<li><b>Continuous Predictor Variables:</b></li> 
-   <ul>
-     <li><b>Avg.Inc</b></li> 
-     <li><b>Med.Age</b></li> 
-   </ul>
- </ul>   
 
-Ind, VM, and POC will be used as interaction variables on each variable of interest. 
 
 </details>
 
@@ -492,9 +495,5 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 </details>
 
 <details><summary><h2>Conclusion</h2></summary> 
-
-It appears that, based on the p-values and the coefficient estimates, that average income and post-secondary
-opportunities have the biggest influence on out-migration. That makes sense, since average income is tied
-to economic opportunities, and post-secondary opportunities are tied to job prospects.
 
 </details>
