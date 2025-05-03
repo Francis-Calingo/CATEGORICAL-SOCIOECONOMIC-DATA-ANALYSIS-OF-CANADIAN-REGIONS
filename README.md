@@ -40,6 +40,7 @@ To fork this repository:
 git clone https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS.git
 cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
 ```
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
@@ -139,6 +140,8 @@ than 12,500</li>
 
 Ind, VM, and POC will be used as interaction variables on each variable of interest. 
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 ---
 
 # Executive Summary
@@ -148,6 +151,8 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 Explain the overarching findings, trends, and themes in 2-3 sentences here. This section should address the question: "If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?" You can put yourself in the shoes of a specific stakeholder - for example, a marketing manager or finance director - to think creatively about this section.
 
 [Visualization, including a graph of overall trends or snapshot of a dashboard]
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
@@ -203,6 +208,8 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 
 [Visualization specific to category 4]
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 ---
 
 # Recommendations:
@@ -224,7 +231,9 @@ Based on the insights and findings above, we would recommend the [stakeholder te
   * **Develop poverty-reduction measures** such as raising the minimum wage and experimenting with basic income pilot projects, which would give lower-income communities greater financial fluidity and allow them to focus more on advancing their careers as opposed to constantly worrying about not meeting their basic needs.
  
   * **Reduce accessibility barriers.** Whether due to lack of accommodations in the workplace or lack of adequate transportation infrastructure that would help facilitate ease of commuting for workers, or other factors, barriers that, at worst, prevents people from applying to certain jobs, and, at best, are hindrances to a good quality of life, and they must be at least mitigated, if not eradicated entirely.
-  
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 ---
 
 # Assumptions and Caveats:
@@ -233,14 +242,17 @@ Throughout the analysis, multiple assumptions were made to manage challenges wit
 
 * Census divisions can often encompass entire cities (e.g., Toronto, Montreal). It is of course not correct to assume that the socioeconomic realities of major cities are monolithic, but that is something that had to be assumed for this analysis due to the limitations placed by the geographic layout of census divisions. Other geographic units such as electoral districts may be more appropriate for dealing with that.
   
-* Assumption 1 (ex: data for December 2021 was missing - this was imputed using a combination of historical trends and December 2020 data)
+* On a related note, as mentioned earlier, census divions are geographic regions for statistical purposes, and are not represented by a government nor public office representative, the way federal electoral districts are represented by a Member of Parliament, or health regions, which are managed by a province's respective Ministry of Health, and so forth. If we wanted to recommend policy to specific representatives, it may be more appropriate to use other geographic divisions for the analysis, for example, electoral districts or health regions.
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
 # Credits and Acknowledgements
 
 Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown.org, https://bookdown.org/yihui/rmarkdown-cookbook/
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 ============================================================
 
