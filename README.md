@@ -257,44 +257,7 @@ Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown
 ============================================================
 
 ## Table of Contents
-* [Introduction](#introduction)
-* [Code and Resources Used](#code-and-resources-used)
-* [Web Scraping](#web-scraping)
-* [Feature Engineering](#feature-engineering)
-* [Model Building](#model-building)
 * [R Analysis](#r-analysis)
-* [Conclusion](#conclusion)
-
-<details><summary><h2>Introduction</h2></summary> 
-
-
-
-</details>
-
-<details><summary><h2>Code and Resources Used</h2></summary> 
-
-  
-</details>
-
-
-<details><summary><h2>Web Scraping</h2></summary> 
-  
-
-  
-</details>
-
-
-<details><summary><h2>Feature Engineering</h2></summary> 
-
-
-
-</details> 
-<details><summary><h2>Model Building</h2></summary> 
-
-
-
-</details>
-
 
 
 <details><summary><h2>R Analysis</h2></summary> 
@@ -506,6 +469,4 @@ Riederer, Yihui Xie, Christophe Dervieux, Emily. "R Markdown Cookbook". bookdown
 
 </details>
 
-<details><summary><h2>Conclusion</h2></summary> 
 
-</details>
