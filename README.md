@@ -22,17 +22,15 @@ Using Statistics Canada's data for Census divisions (2016), this project analyze
 
 Insights and recommendations are provided on the following key areas:
 
-- **Demographics** 
-- **Labour and Education** 
+- **Demographics:** i.e., Mortality, Presence of Racialized Groups, Age
+- **Labour and Education:** i.e., Post-secondary attainment, Income, Unemployment
 
 The following is the R Script used for the quantitative analysis portion of the reporting: Link to see script
     <li><b>IDEs Used:</b> RStudio</li>
     <li><b>R Version:</b> rstudio-2021.09.1</li>
     <li><b>Libraries:</b> car, spida2, effects, lattice, latticeExtra</li>
 
-The following is the report: [Link to download.]()
-
-[click me to download](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/raw/refs/heads/main/Census_Division_Stats_-_Sheet1.csv)
+The following is the report: [Link to report.](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/raw/refs/heads/main/MATH-4330-R-PROJECT.pdf)
 
 To fork this repository:
 
