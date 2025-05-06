@@ -23,6 +23,8 @@
     </ul>
     </ul>
 
+---
+
 # Investigating Each Variable of Interest
 
 ### Methodology for each variable of interest
@@ -35,6 +37,7 @@
  
  ![image](https://github.com/user-attachments/assets/1b17dab3-5ee7-49e5-a9de-af9dcdf81e97)
 
+---
 
 ### Effects of Other Variables on Mort
   <ul>
@@ -50,6 +53,8 @@
       </ul>
 </ul>
 
+---
+
 ### Effects of Other Variables on Post.Sec
   <ul>
     <li><b> Main Model:</b> Mig ~ Post.Sec</li>
@@ -63,6 +68,8 @@
         <li>Fifth test model: Est greatly changes, not so much for SEs.</li>
       </ul>
 </ul>
+
+---
 
 ### Effects of Other Variables on Avg.Income
   <ul>
@@ -78,6 +85,7 @@
       </ul>
 </ul>
 
+---
 
 ### Effects of Other Variables on Un
   <ul>
@@ -93,6 +101,8 @@
       </ul>
 </ul>
 
+---
+
 ### Effects of Other Variables on MedAge
   <ul>
     <li><b> Main Model:</b> Mig ~ MedAge</li>
@@ -106,6 +116,8 @@
         <li>Fifth test model: Little changes.</li>
       </ul>
 </ul>
+
+---
 
 ### Effects of Other Variables on Ind
   <ul>
@@ -121,6 +133,8 @@
       </ul>
 </ul>
 
+---
+
 # Residual Plots and ANOVA
 
 ### Mig ~ Mort+Avg.Income
@@ -135,6 +149,8 @@
 
   ![image](https://github.com/user-attachments/assets/bac041bf-b5c9-450b-94f1-d23f6ea5af72)
 
+---
+
 ### Mig ~ Post.Sec+Avg.Income+MedAge
 
   ![image](https://github.com/user-attachments/assets/1eab38a5-57f3-4778-850b-acc26fa8bd8d)
@@ -146,6 +162,8 @@
   ![image](https://github.com/user-attachments/assets/08e5c1dd-0c8f-4a90-881c-741c0774a647)
 
   ![image](https://github.com/user-attachments/assets/dcbf2adb-e4e1-4668-99b8-ac639a7cb75c)
+
+---
 
 ### Mig ~ Mort+Avg.Income
 
@@ -159,6 +177,8 @@
 
   ![image](https://github.com/user-attachments/assets/20a4dca5-92f3-482d-bbd0-d1ca5b4aa7df)
 
+---
+
 ### Mig ~ Avg.Income+Post.Sec+MedAge
 
   ![image](https://github.com/user-attachments/assets/0ef0907a-71a9-4cf3-ab15-7f86f6d8dcce)
@@ -170,6 +190,8 @@
   ![image](https://github.com/user-attachments/assets/6cee7896-f10f-41ba-b23d-c9768b9093bb)
 
   ![image](https://github.com/user-attachments/assets/ccad27d1-3e8d-4562-9186-0aa1094d5efd)
+
+---
 
 ### Mig ~ Avg.Income+MedAge+Post.Sec
 
@@ -183,6 +205,8 @@
 
   ![image](https://github.com/user-attachments/assets/7ec308d0-02a0-473d-8fd3-cab2f5c78b1e)
 
+---
+
 ### Mig ~ Un+Post.Sec
 
   ![image](https://github.com/user-attachments/assets/545edc8e-48a4-4b6a-a12f-18614d66d980)
@@ -194,6 +218,8 @@
   ![image](https://github.com/user-attachments/assets/9976186a-a259-44a3-a458-660fd7d76f9d)
 
   ![image](https://github.com/user-attachments/assets/924d8630-90bb-48ef-bbb9-0f78a7435417)
+
+---
 
 ### Mig ~ MedAge+Mort
 
