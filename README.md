@@ -46,61 +46,13 @@ cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
 
 The main csv file has **10,878 entries (294 records x 37 fields).**
 
-
-
-[Entity Relationship Diagram here]
-
-### Web Scraping:
-  <ul>
 <li><b>Dataset 1:</b> https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E </li>
-<li><b>Dataset 1 Selected variables (9):</b> </li> 
-      <ul>
-    <li>Census Division</li>
-    <li>Province</li>
-    <li>2016 Population</li>
-    <li>Post secondary credentials attainment rate</li>
-    <li>Average income</li>
-    <li>Unemployment rate</li>
-    <li>Visible Minority Rate</li>
-    <li>Indigenous Rate</li>
-    <li>Median Age</li>
-      </ul>
 <li><b>Dataset 2:</b> https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014001  </li>
-<li><b>Dataset 2 Selected variables (12): </b></li>
-    <ul>
-    <li>Mortality (2015-16, 2016-17, 2017-18, 2018-19)</li>
-    <li>Net inter and intraprovincial migration (2015-16, 2016-17, 2017-18, 2018-19)</li>
-    </ul>
-</ul>
 
-### Feature Engineering:
-<ul>
-<li><b>New variables (9):</b></li> 
-  <ul>
-  <li>4-year average mortality</li>
-  <li>4-year average mortality per million people</li>
-  <li>Net migration (sum of net interprovincial and intraprovincial migration for 2015-16, 2016-17, 2017-18, 2018-19)</li>
-  <li>4-year average of calculated net migration</li>
-  <li>4-year average of calculated net migration per million people</li>
-  <li>POC rate (sum of Visible Minority and Indigenous rate) </li>
-  </ul>
-<li><b>Categorized Variables (7):</b></li> 
-  <ul>
-  <li>Mig, Mort, Post.Sec, Un, VM, Ind, POC</li>
-  </ul>
-<li><b>Variables of Interest: </b></li> 
-  <ul>
-  <li>Mig - 4-year average of calculated net migration per million people</li>
-  <li>Mort - 4-year average mortality per million people</li>
-  <li>Post.Sec - Post secondary credentials attainment rate</li>
-  <li>Avg.Inc - Average income</li>
-  <li>Un - Unemployment rate</li>
-  <li>VM - Visible minority rate</li>
-  <li>Ind - Indigenous rate</li>
-  <li>POC - Combined visible minority and Indigenous rate</li>
-  <li>Med.Age - Median age</li>
-  </ul>
-</ul>
+Below is a diagram showing the workflow from scraping variables of interest from the datasets to engineering new variables to assigning variables as either the categorical response variable, a categorical predictor variable, or a numerical predictor variable:
+
+
+The breakdown of the variable assignment is given below:
 
 ### Model Building:
 
@@ -140,6 +92,10 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 ---
 
 # Executive Summary
+
+### R Analysis
+
+For the full analysis, please click on this Markdown file: [Full R Analysis]
 
 ### Overview of Findings
 
