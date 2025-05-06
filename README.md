@@ -95,7 +95,7 @@ Ind, VM, and POC will be used as interaction variables on each variable of inter
 
 ### R Analysis
 
-For the full analysis, please click on this Markdown file: [Full R Analysis]
+For the full analysis, please click on this Markdown file: [Full R Analysis](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/R%20Analysis.md)
 
 ### Overview of Findings
 
