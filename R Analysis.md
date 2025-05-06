@@ -23,6 +23,8 @@
     </ul>
     </ul>
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 ---
 
 # Investigating Each Variable of Interest
@@ -133,6 +135,8 @@
       </ul>
 </ul>
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 ---
 
 # Residual Plots and ANOVA
@@ -230,5 +234,8 @@
   ![image](https://github.com/user-attachments/assets/545041d8-875b-4eb3-a9fa-ada93e6616ec)
 
   ![image](https://github.com/user-attachments/assets/da2da47f-1e94-45f1-8f78-8ffda90b9aa4)
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
 
   ![image](https://github.com/user-attachments/assets/f11ba0f9-d8a6-4f77-9e46-ed903c8e1bf6)
