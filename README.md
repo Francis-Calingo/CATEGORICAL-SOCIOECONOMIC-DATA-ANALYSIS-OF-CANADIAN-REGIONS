@@ -193,6 +193,8 @@ Based on the insights and findings above, we would recommend the [stakeholder te
 
 Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
 
+* 2019/20 data was intentionally excluded to avoid complicating the analysis from extra noise stemming from the extraordinary impacts of the COVID-19 pandemic.
+
 * Census divisions can often encompass entire cities (e.g., Toronto, Montreal). It is of course not correct to assume that the socioeconomic realities of major cities are monolithic, but that is something that had to be assumed for this analysis due to the limitations placed by the geographic layout of census divisions. Other geographic units such as electoral districts may be more appropriate for dealing with that.
   
 * On a related note, as mentioned earlier, census divions are geographic regions for statistical purposes, and are not represented by a government nor public office representative, the way federal electoral districts are represented by a Member of Parliament, or health regions, which are managed by a province's respective Ministry of Health, and so forth. If we wanted to recommend policy to specific representatives, it may be more appropriate to use other geographic divisions for the analysis, for example, electoral districts or health regions.
