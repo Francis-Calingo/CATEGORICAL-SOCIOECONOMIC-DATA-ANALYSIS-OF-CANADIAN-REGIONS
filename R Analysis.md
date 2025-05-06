@@ -1,5 +1,10 @@
 # R Analysis
 
+# Table of Contents
+* [Investigating VM, Ind, and POC as Interaction Variables](#Investigating-VM-Ind-and-POC-as-Interaction-Variables)
+* [Investigating Each Variable of Interest](#Investigating-Each-Variable-of-Interest)
+* [Residual Plots and ANOVA](#Residual-Plots-and-ANOVA)
+
 # Investigating VM, Ind, and POC as Interaction Variables
   <ul>
     <li><b>Variable of interest:</b> Mort</li>
