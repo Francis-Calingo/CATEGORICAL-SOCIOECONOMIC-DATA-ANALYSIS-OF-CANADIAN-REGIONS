@@ -101,11 +101,12 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
 
 ### Overview of Findings
 
-Explain the overarching findings, trends, and themes in 2-3 sentences here. This section should address the question: "If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?" You can put yourself in the shoes of a specific stakeholder - for example, a marketing manager or finance director - to think creatively about this section.
+* Generally, Ind, VM, and POC were not the best interaction variables to use due to high p-values, although standard errors were more acceptable. Ind was still tested as a non-interaction predictor variable.
 
-[Visualization, including a graph of overall trends or snapshot of a dashboard]
+* After testing out different models using different combinations of predictor variables, it appears that Post.Sec, Avg. Income, and MedAge were the most impactful  variables based on the fact that they had the greatest effect on the estimate (i.e., calculated coefficient) in the equation model while the standard errors remained largely unchanged (i.e., adding these variables did not lower precision nor add any extra noise).
 
-[<b>Back to Table of Contents</b>](#table-of-contents)
+* 
+
 
 ---
 
@@ -147,19 +148,6 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 * **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
 
 [Visualization specific to category 3]
-
-
-### Category 4:
-
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-
-[Visualization specific to category 4]
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
