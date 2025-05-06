@@ -44,12 +44,9 @@ cd CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS
 
 # Data Structure and Model Building
 
-10,878 entries (294 records x 37 fields)
-The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
-- **Table 2:**
-- **Table 3:**
-- **Table 4:**
-- **Table 5:**
+The main csv file has **10,878 entries (294 records x 37 fields).**
+
+
 
 [Entity Relationship Diagram here]
 
