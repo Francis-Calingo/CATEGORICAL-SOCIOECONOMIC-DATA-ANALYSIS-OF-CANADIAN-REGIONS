@@ -54,6 +54,8 @@ Below is a diagram showing the workflow from scraping variables of interest from
 
 The breakdown of the variable assignment is given below:
 
+<img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure1.1.jpg"/>
+
 ### Model Building:
 
 <ul>
