@@ -167,7 +167,7 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 
 # Recommendations:
 
-Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:
+Based on the insights and findings above, the following recommendations for relevant parties (i.e., local governments) have been formulated:
 
 * There is a strong causal relationship between out-migration and educational attainment levels. It could be due to the fact that people are leaving for better educational opportunities (i.e., post-secondary education) and not returning. Of course, we would not expect communities from every census division to advocate for the construction of large-scale colleges or universities in their territories, but other measures could be considered:
 
