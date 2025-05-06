@@ -1,6 +1,6 @@
 # R Analysis
 
-<b>Investigating VM, Ind, and POC as Interaction Variables:</b>
+# Investigating VM, Ind, and POC as Interaction Variables
   <ul>
     <li><b>Variable of interest:</b> Mort</li>
       <ul>
@@ -23,7 +23,9 @@
     </ul>
     </ul>
 
-<b>Methodology for each variable of interest:</b>
+# Investigating Each Variable of Interest
+
+### Methodology for each variable of interest
 <ul>
         <li><b>STEP 1:</b> Take main model: Mig ~ [variable of interest]</li>
         <li><b>STEP 2:</b> Make 5 test models, adding other variable of interest: Mig ~ [variable of interest]+[second variable of interest]</li>
@@ -34,7 +36,7 @@
  ![image](https://github.com/user-attachments/assets/1b17dab3-5ee7-49e5-a9de-af9dcdf81e97)
 
 
-<b>Effects of Other Variables on Mort:</b>
+### Effects of Other Variables on Mort
   <ul>
     <li><b>Main Model:</b> Mig ~ Mort</li>
     <li><b>Test Models:</b> Mig ~ Mort+Post.Sec, Mig ~ Mort + Avg.Income, Mig ~ Mort+Un, Mig ~ Mort+MedAge, Mig ~ Mort+Ind</li>
@@ -48,7 +50,7 @@
       </ul>
 </ul>
 
-<b>Effects of Other Variables on Post.Sec:</b>
+### Effects of Other Variables on Post.Sec
   <ul>
     <li><b> Main Model:</b> Mig ~ Post.Sec</li>
     <li><b>Test Models:</b> Mig ~ Post.Sec + Mort, Mig ~ Post.Sec + Avg.Income, Mig ~ Post.Sec + Un, Mig ~ Post.Sec+MedAge, Mig ~ Post.Sec+Ind</li>
@@ -62,7 +64,7 @@
       </ul>
 </ul>
 
-<b>Effects of Other Variables on Avg.Income:</b>
+### Effects of Other Variables on Avg.Income
   <ul>
     <li><b> Main Model:</b> Mig ~ Avg.Income</li>
     <li><b> Test Models:</b> Mig ~ Avg.Income + Mort, Mig ~ Avg.Income + Avg.Income, Mig ~ Avg.Income + Un, Mig ~ Avg.Income+MedAge, Mig ~ Avg.Income+Ind</li>
@@ -77,7 +79,7 @@
 </ul>
 
 
-<b>Effects of Other Variables on Un:</b>
+### Effects of Other Variables on Un
   <ul>
     <li><b> Main Model:</b> Mig ~ Un</li>
     <li><b> Test Models:</b> Mig ~ Un + Mort, Mig ~ Un + Post.Sec, Mig ~ Un + Avg.Income, Mig ~ Un + MedAge, Mig ~ Un + Ind</li>
@@ -91,7 +93,7 @@
       </ul>
 </ul>
 
-<b>Effects of Other Variables on MedAge:</b>
+### Effects of Other Variables on MedAge
   <ul>
     <li><b> Main Model:</b> Mig ~ MedAge</li>
     <li><b> Test Models:</b> Mig ~ MedAge + Mort, Mig ~ MedAge + Post.Sec, Mig ~ MedAge + Avg.Income, Mig ~ MedAge + Un, Mig ~ MedAge + Ind</li>
@@ -105,7 +107,7 @@
       </ul>
 </ul>
 
-<b>Effects of Other Variables on Ind:</b>
+### Effects of Other Variables on Ind
   <ul>
     <li><b> Main Model:</b> Mig ~ MedAge</li>
     <li><b> Test Models:</b> Mig ~ Ind + Mort, Mig ~ Ind + Post.Sec, Mig ~ Ind + Avg.Income, Mig ~ Ind + Un, Mig ~ Ind + MedAge</li>
@@ -119,9 +121,9 @@
       </ul>
 </ul>
 
-<b>Residual Plots and ANOVA:</b>
-<ul>
-  <li>Mig ~ Mort+Avg.Income</li>
+# Residual Plots and ANOVA
+
+### Mig ~ Mort+Avg.Income
 
   ![image](https://github.com/user-attachments/assets/dd989c24-940a-4284-81e0-da4af0f7aa6a)
 
@@ -133,7 +135,7 @@
 
   ![image](https://github.com/user-attachments/assets/bac041bf-b5c9-450b-94f1-d23f6ea5af72)
 
-  <li>Mig ~ Post.Sec+Avg.Income+MedAge</li>
+### Mig ~ Post.Sec+Avg.Income+MedAge
 
   ![image](https://github.com/user-attachments/assets/1eab38a5-57f3-4778-850b-acc26fa8bd8d)
 
@@ -145,7 +147,7 @@
 
   ![image](https://github.com/user-attachments/assets/dcbf2adb-e4e1-4668-99b8-ac639a7cb75c)
 
-  <li>Mig ~ Mort+Avg.Income</li>
+### Mig ~ Mort+Avg.Income
 
   ![image](https://github.com/user-attachments/assets/cab919ca-45ce-4b43-bf5e-ace90ff02eb5)
 
@@ -157,7 +159,7 @@
 
   ![image](https://github.com/user-attachments/assets/20a4dca5-92f3-482d-bbd0-d1ca5b4aa7df)
 
-  <li>Mig ~ Avg.Income+Post.Sec+MedAge</li>
+### Mig ~ Avg.Income+Post.Sec+MedAge
 
   ![image](https://github.com/user-attachments/assets/0ef0907a-71a9-4cf3-ab15-7f86f6d8dcce)
 
@@ -169,7 +171,7 @@
 
   ![image](https://github.com/user-attachments/assets/ccad27d1-3e8d-4562-9186-0aa1094d5efd)
 
-  <li>Mig ~ Avg.Income+MedAge+Post.Sec</li>
+### Mig ~ Avg.Income+MedAge+Post.Sec
 
   ![image](https://github.com/user-attachments/assets/b2d6e865-17a6-4284-98a9-0d38a4c9994e)
 
@@ -181,7 +183,7 @@
 
   ![image](https://github.com/user-attachments/assets/7ec308d0-02a0-473d-8fd3-cab2f5c78b1e)
 
-  <li>Mig ~ Un+Post.Sec</li>
+### Mig ~ Un+Post.Sec
 
   ![image](https://github.com/user-attachments/assets/545edc8e-48a4-4b6a-a12f-18614d66d980)
 
@@ -193,7 +195,7 @@
 
   ![image](https://github.com/user-attachments/assets/924d8630-90bb-48ef-bbb9-0f78a7435417)
 
-  <li>Mig ~ MedAge+Mort</li>
+### Mig ~ MedAge+Mort
 
   ![image](https://github.com/user-attachments/assets/c4c289fa-5cc7-4dcc-824b-3d7851fcfe0a)
 
