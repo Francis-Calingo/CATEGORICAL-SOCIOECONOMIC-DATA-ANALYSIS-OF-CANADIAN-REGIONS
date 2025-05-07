@@ -178,24 +178,24 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
 * **Mig ~ Post.Sec+Avg.Income+MedAge VERSUS Mig ~ Post.Sec+MedAge+Avg.Income:**
     * When Avg.Income is the second predictor variable in the equation, its deviance is 47.778. When it is the third, its deviance is 14.636.
     * When MedAge is the second predictor variable in the equation, its deviance is 39.919. When it is the third, its deviance is 6.777.
-    <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.1.jpg"/>
-    <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.2.jpg"/>
+    <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.1.png"/>
+    <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.2.png"/>
 
     * Based on the four residual plots for each models, it appears that
-      <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.3.jpg"/>
-      <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.4.jpg"/>
+      <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.3.png"/>
+      <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.4.png"/>
 
     * ****
   
 * **Mig ~ Avg.Income+Post.Sec+MedAge VERSUS Mig ~ Avg.Income+MedAge+Post.Sec:**
     * When Post.Sec is the second predictor variable in the equation, its deviance is 81.791. When it is the third, its deviance is 52.882.
     * When MedAge is the second predictor variable in the equation, its deviance is 35.686. When it is the third, its deviance is 6.777.
-  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.5.jpg"/>
-  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.6.jpg"/>
+  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.5.png"/>
+  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.6.png"/>
 
     * Based on the four residual plots for each models, it appears that
-  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.7.jpg"/>
-  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.8.jpg"/>
+  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.7.png"/>
+  <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.8.png"/>
 
     * ****
   
