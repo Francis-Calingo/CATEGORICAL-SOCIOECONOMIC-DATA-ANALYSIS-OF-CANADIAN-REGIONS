@@ -181,11 +181,9 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
     <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.1.png"/>
     <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.2.png"/>
 
-    * Based on the four residual plots for each models, it appears that
+    * Residual plots:
       <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.3.png"/>
       <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.4.png"/>
-
-    * ****
   
 * **Mig ~ Avg.Income+Post.Sec+MedAge VERSUS Mig ~ Avg.Income+MedAge+Post.Sec:**
     * When Post.Sec is the second predictor variable in the equation, its deviance is 81.791. When it is the third, its deviance is 52.882.
@@ -193,13 +191,11 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.5.png"/>
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.6.png"/>
 
-    * Based on the four residual plots for each models, it appears that
+    * Residual plots
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.7.png"/>
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.8.png"/>
-
-    * ****
   
-* **We can conclude that Post.Sec and Avg.Income are the most impactful variables causally.** 
+* **We can conclude that Post.Sec and Avg.Income are the most impactful variables causally.** This conclusion is based on the ANOVA Tables (i.e., deviance scores), as both variables exhibit higher deviance scores than MedAge. In other words, 
 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
