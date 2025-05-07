@@ -111,41 +111,85 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
 ---
 
 # Insights Deep Dive
-### Category 1:
+### Interaction Variable Analysis:
 
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+[Snippets of the results can be found in the [R Analysis Markdown file](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/R%20Analysis.md)
 
-[Visualization specific to category 1]
-
-
-### Category 2:
-
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Mig ~ Mort * VM, Mig ~ Mort * Ind, Mig ~ Mort * POC:** P-values were consistently high for VM and POC, while they were varied for different Ind categories. Ind was therefore tested against other variables of interest, although its high standard errors means that it is not a good interaction variable for Mort.
   
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Mig ~ Post.Sec * Ind, Mig ~ Avg.Inc * Ind, Mig ~ Un * Ind,Mig ~ MedAge * Ind:**
+    * Possible Hauck-Donner phenomenon for Post.Sec.
+    * Lower p-values and more acceptable standard errors for Avg.Income, but still not good enough.
+    * For third model, Only Ind2 has positive net mig.
+    * For fourth model, Standard errors are low but not as low as in Avg.Income. P-values are still too high.
   
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Based on the results, it would not be good to include Ind as an interaction variable.** It is better off to test Ind as some other type of predictor variable.
 
-[Visualization specific to category 2]
+### Analysis of Each Variable of Interest:
 
+[Snippets of the results can be found in the [R Analysis Markdown file](https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/R%20Analysis.md)
 
-### Category 3:
+* **Effects on Mort:** Mig ~ Mort+Post.Sec, Mig ~ Mort + Avg.Income, Mig ~ Mort+Un, Mig ~ Mort+MedAge, Mig ~ Mort+Ind:
+    *  First test model: When Post.Sec added, Mort doesn’t change SEs much, but changes estimates a lot (except for Mort2)
+    *  Second test model: After adding Avg.Income, SE changes minimally, Estimates greatly change.
+    *  Third test model: SE and Est minimal change.
+    *  Fourth test model: Estimates greatly change, SEs don’t.
+    *  Fifth test model: Estimates greatly change, SEs don’t.
+  
+* **Effects of Other Variables on Post.Sec:**  Mig ~ Post.Sec + Mort, Mig ~ Post.Sec + Avg.Income, Mig ~ Post.Sec + Un, Mig ~ Post.Sec+MedAge, Mig ~ Post.Sec+Ind
+    * First test model: Minimal change for both Est and SEs, but big change for Post.Sec.2
+    * Second test model: Est greatly change, not so much for Standard Errors.
+    * Third test model: Est change varies, but est mostly unchanged. SEs are also unchanged. assume independent.
+    * Fourth test model: Est greatly changes, not so much for SEs.
+    * Fifth test model: Est greatly changes, not so much for SEs.
+  
+* **Effects of Other Variables on Avg.Income:**  Mig ~ Avg.Income + Mort, Mig ~ Avg.Income + Post.Sec, Mig ~ Avg.Income + Un, Mig ~ Avg.Income+MedAge, Mig ~ Avg.Income+Ind
+    * First test model: This confirms that Average income and mort are independent.
+    * Second test model: Est changes a lot.
+    * Third test model: Est changes not as much as before. Assume independence.
+    * Fourth test model: Est changes greatly.
+    * Fifth test model: Minimal change in est and SEs. Independent.
+  
+* **Effects of Other Variables on Un:**  Mig ~ Un + Mort, Mig ~ Un + Post.Sec, Mig ~ Un + Avg.Income, Mig ~Un + MedAge, Mig ~ Un + Ind
+    * First test model: Again all except Un2 has minimal est change.
+    * Second test model: Massive change in Est not so much in SE.
+    * Third test model: No Significant change in Est.
+    * Fourth test model: All except Un2 no significant change.
+    * Fifth test model: Massive change in Est not so much in SE.
 
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Effects of Other Variables on MedAge:**  Mig ~ MedAge + Mort, Mig ~ MedAge + Post.Sec, Mig ~ MedAge + Avg.Income, Mig ~ MedAge + Un, Mig ~ MedAge + Ind
+    * First test model: Significant in Est change, not much change for SE.
+    * Second test model: Not as big of a change with est.
+    * Third test model: Little changes.
+    * Fourth test model: Little changes.
+    * Fifth test model: Little changes.
+
+* **Effects of Other Variables on Ind:**  Mig ~ Ind + Mort, Mig ~ Ind + Post.Sec, Mig ~ Ind + Avg.Income, Mig ~ Ind + Un, Mig ~ Ind + MedAge
+    *  First test model: All except Ind2 sees minimal change in Est.
+    *  Second test model: Minimal change in Est. Independent.
+    *  Third test model: Minimal change in Est. Independent.
+    *  Fourth test model: All except Ind2 see minimal change in Est.
+    *  Fifth test model: All except Ind2 see minimal change in Est.
+
+### Residual Analysis and ANOVA for Most Impactful Variables:
+
+* **MedAge, Post.Sec, and Avg.Income were deemed the most impactful variables.** That interpretation stemmed from the results, which showed that they generally had the biggest impact on the Est (Estimates) coefficient while causing, at most, minimal changes to the standard errors on other variables. In other words, they generally had the highest quantitative impact on the models' calculated coefficient while the differences between observed and predicted values were not significantly changed.
   
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Mig ~ Post.Sec+Avg.Income+MedAge VERSUS Mig ~ Post.Sec+MedAge+Avg.Income:**
+    * When Avg.Income is the second predictor variable in the equation, its deviance is 47.778. When it is the third, its deviance is 14.636.
+    * When MedAge is the second predictor variable in the equation, its deviance is 39.919. When it is the third, its deviance is 6.777.
+
+    * Based on the four residual plots for each models, it appears that
+    * ****
   
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Mig ~ Avg.Income+Post.Sec+MedAge VERSUS Mig ~ Avg.Income+MedAge+Post.Sec:**
+    * When Post.Sec is the second predictor variable in the equation, its deviance is 81.791. When it is the third, its deviance is 52.882.
+    * When MedAge is the second predictor variable in the equation, its deviance is 35.686. When it is the third, its deviance is 6.777.
+
+    * Based on the four residual plots for each models, it appears that
+    * ****
   
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **We can conclude that Post.Sec and Avg.Income are the most impactful variables causally.** 
 
 [Visualization specific to category 3]
 
