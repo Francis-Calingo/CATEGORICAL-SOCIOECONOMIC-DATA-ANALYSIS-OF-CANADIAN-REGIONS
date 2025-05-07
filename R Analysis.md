@@ -81,7 +81,7 @@
 ### Effects of Other Variables on Avg.Income
   <ul>
     <li><b> Main Model:</b> Mig ~ Avg.Income</li>
-    <li><b> Test Models:</b> Mig ~ Avg.Income + Mort, Mig ~ Avg.Income + Avg.Income, Mig ~ Avg.Income + Un, Mig ~ Avg.Income+MedAge, Mig ~ Avg.Income+Ind</li>
+    <li><b> Test Models:</b> Mig ~ Avg.Income + Mort, Mig ~ Avg.Income + Post.Sec, Mig ~ Avg.Income + Un, Mig ~ Avg.Income+MedAge, Mig ~ Avg.Income+Ind</li>
     <li><b>Results:</b></li>
     <ul>
         <li>First test model: This confirms that Average income and mort are ind.</li>
@@ -128,7 +128,7 @@
 
 ### Effects of Other Variables on Ind
   <ul>
-    <li><b> Main Model:</b> Mig ~ MedAge</li>
+    <li><b> Main Model:</b> Mig ~ Ind</li>
     <li><b> Test Models:</b> Mig ~ Ind + Mort, Mig ~ Ind + Post.Sec, Mig ~ Ind + Avg.Income, Mig ~ Ind + Un, Mig ~ Ind + MedAge</li>
     <li><b>Results:</b></li>
     <ul>
@@ -174,7 +174,7 @@
 
 ---
 
-### Mig ~ Mort+Avg.Income
+### Mig ~ Post.Sec+MedAge+Avg.Income
 
   ![image](https://github.com/user-attachments/assets/cab919ca-45ce-4b43-bf5e-ace90ff02eb5)
 
@@ -240,7 +240,6 @@
 
   ![image](https://github.com/user-attachments/assets/da2da47f-1e94-45f1-8f78-8ffda90b9aa4)
 
+    ![image](https://github.com/user-attachments/assets/f11ba0f9-d8a6-4f77-9e46-ed903c8e1bf6)
+
 [<b>Back to Table of Contents</b>](#table-of-contents)
-
-
-  ![image](https://github.com/user-attachments/assets/f11ba0f9-d8a6-4f77-9e46-ed903c8e1bf6)
