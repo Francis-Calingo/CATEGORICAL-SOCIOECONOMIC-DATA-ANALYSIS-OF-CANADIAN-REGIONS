@@ -105,8 +105,7 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
 
 * After testing out different models using different combinations of predictor variables, it appears that Post.Sec, Avg. Income, and MedAge were the most impactful  variables based on the fact that they had the greatest effect on the estimate (i.e., calculated coefficient) in the equation model while the standard errors remained largely unchanged (i.e., adding these variables did not lower precision nor add any extra noise).
 
-* 
-
+* After experimenting with the placement of the three aforementioned variables (i.e., Mig ~ Post.Sec+Avg.Income+MedAge VERSUS Mig ~ Post.Sec+MedAge+Avg.Income, Mig ~ Avg.Income+Post.Sec+MedAge VERSUS Mig ~ Avg.Income+MedAge+Post.Sec), we concluded that, based on the ANOVA tables, Post.Sec and Avg.Income were the most impactful variables.
 
 ---
 
@@ -195,7 +194,7 @@ For the full analysis, please click on this Markdown file: [Full R Analysis](htt
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.7.png"/>
   <img src="https://github.com/Francis-Calingo/CATEGORICAL-SOCIOECONOMIC-DATA-ANALYSIS-OF-CANADIAN-REGIONS/blob/main/Figures/Figure3.8.png"/>
   
-* **We can conclude that Post.Sec and Avg.Income are the most impactful variables causally.** 
+* **We can conclude that Post.Sec and Avg.Income are the most impactful variables.** This conclusion stems from the ANOVA table results (i.e., deviance), as both variables exhibited higher deviance when they are placed sequentially after the other, versus when they are placed sequentially after MedAge. In other words, they explain more of the deviance when they are next to each other in a model than when they are next to MedAge.
 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
